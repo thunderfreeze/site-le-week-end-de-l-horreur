@@ -1,7 +1,7 @@
 <template lang="pug">
   section
     div.schedule
-      h2 QUESTION POUR UN MECHANT
+      h2.mechant QUESTION POUR UN MECHANT
       h3.prog PROGRAMMATION
       p.horaire.date Vendredi 7 juin 2019
       p.horaire 20:00  Le fantôme de l'opéra (Rupert Julian) 1925
@@ -16,18 +16,48 @@
       p.horaire 17:30  Le corbeau (Lew Landers) 1935
       p.horaire 20:00  Le loup garou (M.?ight Shyamalan)1941
       p 22:00  Psychose (Alphred Hitchcock)1960
-      p AU CINEMA-CAFE VIDEODROME-2
-      p 49 Cours Julien - 13006 Marseille
-      p 04 91 42 75 41
+      p.adresse.pad AU CINEMA-CAFE VIDEODROME-2
+      p.adresse 49 Cours Julien - 13006 Marseille
+      p.adresse 04 91 42 75 41
 
     nav.menu
       ul
         li
-          router-link.active(:to="{name: 'About'}") A propos
+          router-link(:to="{name: 'About'}") A propos
         li
-          router-link(:to="{name: 'Schedule'}") Horaires
+          router-link.active(:to="{name: 'Schedule'}") Horaires
         p.score Ton score: 08/10
 </template>
+<style lang="sass">
+
+
+.schedule
+  width: 50%
+  margin-left: 25%
+
+.prog
+  padding-top: 80px
+  padding-bottom: 0px
+  margin-bottom: 0
+
+.mechant
+  padding-top: 50px
+
+.horaire
+  text-align: left
+  width: 100%
+  padding-left: 25%
+
+.date
+  padding-top: 40px
+  font-weight: 900
+
+.pad
+  padding-top: 50px
+
+.adresse
+  font-weight: 900
+</style>
 
 <script>
 export default {

@@ -1,7 +1,7 @@
 <template lang="pug">
   section
     div.about
-      h2 QUESTION POUR UN MECHANT
+      h2.pour-un-mechant QUESTION POUR UN MECHANT
       h1.videodrome VIDEODROME-2
       h3 Diffusion cinématographique alternative
       p.place2 Videodrome 2 est avant tout un projet né de la volonté de rencontrer, d'échanger et d'experimenter.Projet porté par la SCOP DCA (Diffusion Cinématographique Alternative) et l'association Solaris en charge de al coordination de programmation, il souhaite offrir un lieu unique et polyvalent dédié a la diffusion cinématographique et la cinéphilie.
@@ -21,6 +21,19 @@
 .about
   width: 50%
   margin-left: 25%
+
+.videodrome
+  color: #FFF
+  margin-bottom: 0
+
+.pour-un-mechant
+  padding-bottom: 100px
+  padding-top: 100px
+
+.place2
+  padding-bottom: 30px
+  text-align: left
+  font-size: 21px
 </style>
 
 <script>

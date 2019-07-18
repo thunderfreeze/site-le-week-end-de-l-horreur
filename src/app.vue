@@ -21,19 +21,10 @@
 @import "minireset.css/minireset.sass"
 @import "utilities/transitions.sass"
 
-body
-  background-image: url('1-page-accueil.jpg')
-  background-color: #000
-
 .debug
   position: fixed
   top: 0
   left: 0
-
-
-.schedule
-  width: 50%
-  margin-left: 25%
 
 h1
   color: #E00000
@@ -45,7 +36,6 @@ h2
   text-align: center
   font-size: 40px
   color: #E00000
-  padding-top: 110px
 
 h3
   text-align: center
@@ -54,48 +44,24 @@ h3
   padding-bottom: 80px
   margin-top: 0
 
-h3.prog
-  padding-top: 80px
-  padding-bottom: 0px
-  margin-bottom: 0
-
-h1.videodrome
-  color: #FFF
-  margin-bottom: 0
-
 p
   text-align: center
   font-size: 23px
   color: #FFF
   margin: 0
 
-
-p.place2
-  padding-bottom: 30px
-  text-align: left
-  font-size: 21px
-
-
-
-p.score
+.score
   padding-left: 1300px
   display: inline-block
   vertical-align: middle
-
-p.horaire
-  text-align: left
-  width: 70%
-  padding-left: 20%
-
-p.date
-  padding-top: 40px
-
 
 nav.menu ul li
   display: inline
 
 nav.menu
-  padding-top: 140px
+  position: absolute
+  bottom: 35px
+  left: 55px
 
 a
   color: #AEAEAE

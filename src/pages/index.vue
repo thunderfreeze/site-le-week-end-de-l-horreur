@@ -16,12 +16,16 @@
 </template>
 
 <style lang="sass">
+body
+  background-image: url('1-page-accueil.jpg')
+  background-color: #000
+
 .accueil
   width: 60%
   margin-left: 20%
 
 .title
-  padding-top: 110px
+  padding-top: 130px
 
 .place
   padding-top: 20px
@@ -39,7 +43,7 @@
   background-color: #E00000
   color: #FFF
   width: 470px
-  border-radius: 235px
+  border-radius: 25px
   border-color: red
   padding-top: 10px
   padding-bottom: 10px
