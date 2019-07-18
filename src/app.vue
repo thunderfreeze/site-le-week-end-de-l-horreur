@@ -6,7 +6,12 @@
           router-link(:to="{name: 'Home'}") Home
         li
           router-link(:to="{name: 'About'}") About
-
+        li
+          router-link(:to="{name: 'Schedule'}") Schedule
+        li
+          router-link(:to="{name: 'Question'}") Question
+        li
+          router-link(:to="{name: 'Answer'}") Answer
     p {{some_const}}
 
     section

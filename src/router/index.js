@@ -13,6 +13,21 @@ const routes = [
     path: "/a-propos",
     name: "About",
     component: () => import("@/pages/about")
+  },
+  {
+    path: "/horaire",
+    name: "Schedule",
+    component: () => import("@/pages/schedule")
+  },
+  {
+    path: "/question",
+    name: "Question",
+    component: () => import("@/pages/question")
+  },
+  {
+    path: "/reponse",
+    name: "Answer",
+    component: () => import("@/pages/answer")
   }
 ];
 
