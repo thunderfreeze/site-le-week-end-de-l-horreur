@@ -18,8 +18,9 @@
 </template>
 
 <style lang="sass">
-// @import "minireset.css/minireset.sass"
+@import "minireset.css/minireset.sass"
 @import "utilities/transitions.sass"
+
 body
   background-image: url('1-page-accueil.jpg')
   background-color: #000
@@ -29,11 +30,8 @@ body
   top: 0
   left: 0
 
-.accueil
-  width: 60%
-  margin-left: 20%
 
-.about
+.schedule
   width: 50%
   margin-left: 25%
 
@@ -47,6 +45,7 @@ h2
   text-align: center
   font-size: 40px
   color: #E00000
+  padding-top: 110px
 
 h3
   text-align: center
@@ -54,6 +53,11 @@ h3
   font-size: 30px
   padding-bottom: 80px
   margin-top: 0
+
+h3.prog
+  padding-top: 80px
+  padding-bottom: 0px
+  margin-bottom: 0
 
 h1.videodrome
   color: #FFF
@@ -65,8 +69,6 @@ p
   color: #FFF
   margin: 0
 
-p.place
-  padding-top: 20px
 
 p.place2
   padding-bottom: 30px
@@ -74,29 +76,20 @@ p.place2
   font-size: 21px
 
 
-p.but
-  padding-top: 200px
-  font-weight: 900
 
 p.score
   padding-left: 1300px
   display: inline-block
   vertical-align: middle
 
-button.commencer
-  margin-left: auto
-  margin-top: 140px
-  margin-right: auto
-  display: block
-  font-size: 48px
-  background-color: #E00000
-  color: #FFF
-  width: 470px
-  border-radius: 10%
-  border-color: red
-  padding-top: 10px
-  padding-bottom: 10px
-  letter-spacing: 9px
+p.horaire
+  text-align: left
+  width: 70%
+  padding-left: 20%
+
+p.date
+  padding-top: 40px
+
 
 nav.menu ul li
   display: inline

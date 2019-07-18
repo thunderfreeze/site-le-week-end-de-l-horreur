@@ -17,6 +17,12 @@
 
 </template>
 
+<style lang="sass">
+.about
+  width: 50%
+  margin-left: 25%
+</style>
+
 <script>
 export default {
   name: "About"
