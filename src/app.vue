@@ -1,6 +1,6 @@
 <template lang="pug">
   section.wrapper
-    nav
+    nav.debug
       ul
         li
           router-link(:to="{name: 'Home'}") Home
@@ -23,6 +23,11 @@
 body
   background-image: url('1-page-accueil.jpg')
   background-color: #000
+
+.debug
+  position: fixed
+  top: 0
+  left: 0
 
 .accueil
   width: 60%
