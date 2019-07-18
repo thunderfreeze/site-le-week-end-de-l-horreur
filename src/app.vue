@@ -5,7 +5,7 @@
         li
           router-link(:to="{name: 'Home'}") Home
         li
-          router-link(:to="{name: 'Page'}") Page
+          router-link(:to="{name: 'About'}") About
 
     p {{some_const}}
 
