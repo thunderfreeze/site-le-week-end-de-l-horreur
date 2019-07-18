@@ -15,6 +15,16 @@
 
     section
       router-view
+
+
+    p.score Ton score: 08/10
+
+    nav.menu
+      ul
+        li
+          router-link(:to="{name: 'About'}") A propos
+        li
+          router-link(:to="{name: 'Schedule'}") Horaires
 </template>
 
 <style lang="sass">

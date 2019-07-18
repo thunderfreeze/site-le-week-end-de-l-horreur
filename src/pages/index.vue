@@ -6,13 +6,6 @@
       p du 7 au 9 juin prochains, la première édition du week-end de l'horreur
       p.but Pour découvrir la programmation, répond correctement à ce Quizz
       router-link.commencer(:to="{name: 'About'}") COMMENCER
-
-    nav.menu
-      ul
-        li
-          router-link(:to="{name: 'About'}") A propos
-        li
-          router-link(:to="{name: 'Schedule'}") Horaires
 </template>
 
 <style lang="sass">

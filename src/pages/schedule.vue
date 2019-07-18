@@ -19,18 +19,9 @@
       p.adresse.pad AU CINEMA-CAFE VIDEODROME-2
       p.adresse 49 Cours Julien - 13006 Marseille
       p.adresse 04 91 42 75 41
-
-    nav.menu
-      ul
-        li
-          router-link(:to="{name: 'About'}") A propos
-        li
-          router-link.active(:to="{name: 'Schedule'}") Horaires
-        p.score Ton score: 08/10
 </template>
+
 <style lang="sass">
-
-
 .schedule
   width: 50%
   margin-left: 25%

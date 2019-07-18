@@ -6,13 +6,6 @@
     p Les rats d'Opéra
     p Le fantôme de l'Opéra
     p La danseuse étoilée
-    nav.menu
-      ul
-        li
-          router-link.active(:to="{name: 'About'}") A propos
-        li
-          router-link(:to="{name: 'Schedule'}") Horaires
-        p.score Ton score: 08/10
 </template>
 
 <style lang="sass">
@@ -32,6 +25,7 @@ body
   top: 30px
   color: white
   font-size: 30px
+
 .question
   text-align: center
   padding-top: 350px
