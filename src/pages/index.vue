@@ -5,7 +5,7 @@
       p.place Au café-cinéma Videodrome 2 de Marseille se tiendra 
       p du 7 au 9 juin prochains, la première édition du week-end de l'horreur
       p.but Pour découvrir la programmation, répond correctement à ce Quizz
-      router-link.commencer(:to="{name: 'About'}") COMMENCER
+      router-link.commencer(:to="{name: 'Question'}") COMMENCER
 </template>
 
 <style lang="sass">
