@@ -30,6 +30,10 @@
 <style lang="sass">
 @import "minireset.css/minireset.sass"
 @import "utilities/transitions.sass"
+@import "fonts/_all.sass"
+
+body
+  font-family: "DK-Magical-Brush"
 
 .debug
   position: fixed
