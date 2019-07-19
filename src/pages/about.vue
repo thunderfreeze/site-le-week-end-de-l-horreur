@@ -1,6 +1,6 @@
 <template lang="pug">
   section
-    div.about
+    div.about-size
       h2.pour-un-mechant QUESTION POUR UN MECHANT
       h1.videodrome VIDEODROME-2
       h3 Diffusion cinématographique alternative
@@ -10,9 +10,12 @@
 </template>
 
 <style lang="sass">
-.about
+.about-size
   width: 50%
   margin-left: 25%
+
+.about
+  background-color: #000
 
 .videodrome
   color: #FFF

@@ -2,7 +2,7 @@
   section
     h2.question-pour-un-mechant QUESTION POUR UN MECHANT
     h2.page 01/10
-    h1.question QUI DORT DANS UN OPERA POUR PECHO?
+    h1.question-title QUI DORT DANS UN OPERA POUR PECHO?
     p Les rats d'Opéra
     p Le fantôme de l'Opéra
     p La danseuse étoilée
@@ -26,7 +26,7 @@ body
   color: white
   font-size: 30px
 
-.question
+.question-title
   text-align: center
   padding-top: 350px
   color: #F0CF2C

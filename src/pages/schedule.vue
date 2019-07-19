@@ -1,6 +1,6 @@
 <template lang="pug">
   section
-    div.schedule
+    div.schedule-size
       h2.mechant QUESTION POUR UN MECHANT
       h3.prog PROGRAMMATION
       p.horaire.date Vendredi 7 juin 2019
@@ -22,7 +22,11 @@
 </template>
 
 <style lang="sass">
+
 .schedule
+  background-color: #000
+
+.schedule-size
   width: 50%
   margin-left: 25%
 

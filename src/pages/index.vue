@@ -9,8 +9,7 @@
 </template>
 
 <style lang="sass">
-body
-  background-image: url('1-page-accueil.jpg')
+.home
   background-color: #000
 
 .accueil
