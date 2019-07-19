@@ -1,39 +1,41 @@
 <template lang="pug">
-  section
-    div.accueil
-      h1.title QUESTION POUR UN MECHANT
-      p.place Au café-cinéma Videodrome 2 de Marseille se tiendra 
-      p.place du 7 au 9 juin prochains, la première édition du week-end de l'horreur
-      p.but Pour découvrir la programmation, répond correctement à ce Quizz
-      router-link.commencer(:to="{name: 'Question'}") COMMENCER
+  section.page-container
+    h1.title QUESTION POUR UN MECHANT
+    p.place Au café-cinéma Videodrome 2 de Marseille se tiendra 
+    p.place du 7 au 9 juin prochains, la première édition du week-end de l'horreur
+    p.but Pour découvrir la programmation, répond correctement à ce Quizz
+
+    router-link.commencer(:to="{name: 'Question'}") COMMENCER
 </template>
 
 <style lang="sass">
 .home
   background-color: #000
 
-.accueil
-  width: 60%
-  margin-left: 20%
+.page-container
+  position: relative
+  height: 840px
 
 .title
   padding-top: 174px
   padding-bottom: 43px
+  margin: 0 auto
   font-family: "bloodlust"
+  font-size: 100px
 
 .place
-
   font-family: "Montserrat-Medium"
 
 .but
-  padding-top: 200px
+  padding-top: 166.83px
   font-weight: 900
   font-family: "Montserrat-Bold"
 
 .commencer
-  margin-left: auto
-  margin-top: 140px
-  margin-right: auto
+  position: absolute
+  bottom: 0
+  left: 50%
+  transform: translateX(-50%)
   display: block
   font-size: 48px
   background-color: #E00000
@@ -42,6 +44,8 @@
   border-radius: 25px
   border-color: red
   padding-top: 10px
+  text-align: center
+  text-decoration: none
   padding-bottom: 10px
   letter-spacing: 9px
   font-family: "Montserrat-Bold"

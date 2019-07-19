@@ -1,5 +1,5 @@
 <template lang="pug">
-  section.wrapper
+  section.main-container
     nav.debug
       ul
         li
@@ -13,8 +13,7 @@
         li
           router-link(:to="{name: 'Answer'}") Answer
 
-    section
-      router-view
+    router-view
 
 
     p.score Ton score: 08/10
@@ -33,12 +32,23 @@
 @import "fonts/_all.sass"
 
 body
-  font-family: "DK-Magical-Brush"
+  &.home
+    .score
+      display: none
 
 .debug
   position: fixed
   top: 0
   left: 0
+
+  a
+    color: #AEAEAE
+    font-size: 25px
+    font-weight: 300
+    text-decoration: none
+    padding-left: 50px
+    display: inline-block
+    vertical-align: middle
 
 h1
   color: #E00000
@@ -64,27 +74,23 @@ p
   color: #FFF
   margin: 0
 
+.main-container
+  position: relative
+  height: 100vh
+
 .score
   padding-left: 1300px
   display: inline-block
   vertical-align: middle
 
-nav.menu ul li
+.menu ul li
   display: inline
 
-nav.menu
+.menu
   position: absolute
-  bottom: 35px
-  left: 55px
-
-a
-  color: #AEAEAE
-  font-size: 25px
-  font-weight: 300
-  text-decoration: none
-  padding-left: 50px
-  display: inline-block
-  vertical-align: middle
+  bottom: 40px
+  width: 408px
+  height: 65px
 
 .active
   color: #FFF
