@@ -1,6 +1,9 @@
 <template lang="pug">
   section
-    h1 Answer
+    h2.question-pour-un-mechant QUESTION POUR UN MECHANT
+    h2.page 01/10
+    p.bonne-reponse La bonne réponse était
+    h1.fantome LE FANTOME DE L'OPERA
 </template>
 
 <style lang="sass">
@@ -19,6 +22,9 @@
   color: white
   font-size: 40px
   font-family: "Bloodlust"
+
+.bonne-reponse
+  padding-top: 62px
 </style>
 <script>
 export default {
