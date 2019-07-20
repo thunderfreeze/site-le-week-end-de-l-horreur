@@ -14,17 +14,19 @@ body
 
 .question-pour-un-mechant
   position: absolute
-  left: 30px
-  top: 30px
+  left: 34px
+  top: 34px
   color: white
-  font-size: 30px
+  font-size: 40px
+  font-family: "Bloodlust"
 
 .page
   position: absolute
-  right: 30px
-  top: 30px
+  right: 42px
+  top: 34px
   color: white
-  font-size: 30px
+  font-size: 40px
+  font-family: "Bloodlust"
 
 .question-title
   text-align: center
