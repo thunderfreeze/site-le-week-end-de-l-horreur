@@ -4,8 +4,9 @@
     p.place Au café-cinéma Videodrome 2 de Marseille se tiendra 
     p.place du 7 au 9 juin prochains, la première édition du week-end de l'horreur
     p.but Pour découvrir la programmation, répond correctement à ce Quizz
-
-    router-link.commencer(:to="{name: 'Question'}") COMMENCER
+    .container-cta
+      p.blood POURMECHANT
+      router-link.commencer(:to="{name: 'Question'}") COMMENCER
 </template>
 
 <style lang="sass">
@@ -15,9 +16,24 @@
 .page-container
   position: relative
   height: 840px
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: space-around
+
+.container-cta
+  position: relative
+  margin-top: 86px
+
+.blood
+  font-family: "bloodlust"
+  top: 10px
+  font-size: 97px
+  position: absolute
+  color: red
 
 .title
-  padding-top: 174px
+  padding-top: 134px
   padding-bottom: 43px
   margin: 0 auto
   font-family: "bloodlust"
@@ -32,11 +48,8 @@
   font-family: "Montserrat-Bold"
 
 .commencer
-  position: absolute
-  bottom: 0
-  left: 50%
-  transform: translateX(-50%)
   display: block
+  position: relative
   font-size: 48px
   background-color: #E00000
   color: #FFF
@@ -44,6 +57,7 @@
   border-radius: 25px
   border-color: red
   padding-top: 10px
+  padding-left: 0
   text-align: center
   text-decoration: none
   padding-bottom: 10px

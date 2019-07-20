@@ -1,5 +1,18 @@
 <template lang="pug">
   section.main-container
+    
+
+    router-view
+
+    p.score Ton score: 08/10
+
+    nav.menu
+      ul
+        li
+          router-link(:to="{name: 'About'}") A propos
+        li
+          router-link(:to="{name: 'Schedule'}") Horaires
+
     nav.debug
       ul
         li
@@ -13,17 +26,7 @@
         li
           router-link(:to="{name: 'Answer'}") Answer
 
-    router-view
 
-
-    p.score Ton score: 08/10
-
-    nav.menu
-      ul
-        li
-          router-link(:to="{name: 'About'}") A propos
-        li
-          router-link(:to="{name: 'Schedule'}") Horaires
 </template>
 
 <style lang="sass">
@@ -41,14 +44,15 @@ body
   top: 0
   left: 0
 
-  a
-    color: #AEAEAE
-    font-size: 25px
-    font-weight: 300
-    text-decoration: none
-    padding-left: 50px
-    display: inline-block
-    vertical-align: middle
+a
+  color: #AEAEAE
+  font-size: 25px
+  font-weight: 300
+  text-decoration: none
+  padding-left: 50px
+  display: inline-block
+  vertical-align: middle
+  font-family: "Montserrat-Light"
 
 h1
   color: #E00000
@@ -70,7 +74,7 @@ h3
 
 p
   text-align: center
-  font-size: 23px
+  font-size: 25px
   color: #FFF
   margin: 0
 
@@ -79,16 +83,17 @@ p
   height: 100vh
 
 .score
-  padding-left: 1300px
-  display: inline-block
-  vertical-align: middle
+  position: absolute
+  bottom: 0
+  right: 50px
+  height: 65px
 
 .menu ul li
   display: inline
 
 .menu
   position: absolute
-  bottom: 40px
+  bottom: 0
   width: 408px
   height: 65px
 
