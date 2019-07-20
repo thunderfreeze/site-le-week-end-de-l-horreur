@@ -44,6 +44,12 @@ body
   top: 0
   left: 0
 
+.picture
+  height: 487px
+  width: 355px
+  display: block
+  margin: auto
+
 a
   color: #AEAEAE
   font-size: 25px
