@@ -38,12 +38,8 @@
   margin: 0 auto
   font-family: "bloodlust"
 
-.place
-  font-size: 25px
-
 .but
   padding-top: 166.83px
-  font-weight: 900
   font-family: "Montserrat-Bold"
 
 .commencer
