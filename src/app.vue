@@ -80,8 +80,9 @@ a
 h1
   color: #E00000
   text-align: center
-  font-size: 2rem
+  font-size: 2.5rem
   margin-bottom: 70px
+  line-height: .75
 
   +from($tablet)
     font-size: 3.25rem
@@ -92,6 +93,9 @@ h2
   text-align: center
   font-size: 1.25rem
   color: #E00000
+
+  +from($tablet)
+    font-size: 2.25rem
 
 h3
   text-align: center
@@ -111,7 +115,7 @@ p
   height: 100vh
 
 .score
-  position: absolute
+  position: fixed
   bottom: 0
   right: 50px
   height: 65px
@@ -120,7 +124,7 @@ p
   display: inline
 
 .menu
-  position: absolute
+  position: fixed
   bottom: 0
   width: 408px
   height: 65px
