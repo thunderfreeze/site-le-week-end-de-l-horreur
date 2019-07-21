@@ -34,6 +34,23 @@
 @import "utilities/transitions.sass"
 @import "fonts/_all.sass"
 
+
+html
+  font-size: 6vw
+
+  +tablet
+    font-size: 3vw
+
+  +desktop
+    font-size: 2.5vw
+
+  +widescreen
+    font-size: 2vw
+
+  +fullhd
+    font-size: 1.5625vw
+
+
 body
   &.home
     .score
@@ -63,24 +80,29 @@ a
 h1
   color: #E00000
   text-align: center
-  font-size: 55px
+  font-size: 2rem
   margin-bottom: 70px
+
+  +from($tablet)
+    font-size: 3.25rem
+
+
 
 h2
   text-align: center
-  font-size: 40px
+  font-size: 1.25rem
   color: #E00000
 
 h3
   text-align: center
   color: #FFF
-  font-size: 30px
-  padding-bottom: 80px
+  font-size: 1rem
+  padding-bottom: 1em
   margin-top: 0
 
 p
   text-align: center
-  font-size: 25px
+  font-size: 1rem
   color: #FFF
   margin: 0
 
