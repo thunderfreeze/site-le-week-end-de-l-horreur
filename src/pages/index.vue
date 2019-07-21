@@ -1,7 +1,7 @@
 <template lang="pug">
   section.page-container
     h1.title QUESTION POUR UN MECHANT
-    p.place Au café-cinéma Videodrome 2 de Marseille se tiendra 
+    p Au café-cinéma Videodrome 2 de Marseille se tiendra 
     p.place du 7 au 9 juin prochains, la première édition du week-end de l'horreur
     p.but Pour découvrir la programmation, répond correctement à ce Quizz
     .container-cta
@@ -37,10 +37,9 @@
   padding-bottom: 43px
   margin: 0 auto
   font-family: "bloodlust"
-  font-size: 100px
 
 .place
-  font-family: "Montserrat-Medium"
+  font-size: 25px
 
 .but
   padding-top: 166.83px

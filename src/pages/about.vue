@@ -30,8 +30,6 @@
 
 .diffusion
   font-family: "Montserrat-Medium"
-  font-size: 36px
-
 
 .place2
   padding-bottom: 30px
