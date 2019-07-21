@@ -1,6 +1,6 @@
 <template lang="pug">
   section
-    h2.mechant QUESTION POUR UN MECHANT
+    h1.mechant QUESTION POUR UN MECHANT
     div.schedule-size
       h3.prog BRAVO TU AS TERMINE LE QUIZZ
       h3.prog.programation PROGRAMMATION
@@ -53,7 +53,6 @@
   padding-top: 95px
   padding-bottom: 26px
   font-family: "Bloodlust"
-  font-size: 70px
 
 .horaire
   text-align: center
