@@ -1,7 +1,7 @@
 <template lang="pug">
   section
+    h2.mechant QUESTION POUR UN MECHANT
     div.schedule-size
-      h2.mechant QUESTION POUR UN MECHANT
       h3.prog BRAVO TU AS TERMINE LE QUIZZ
       h3.prog.programation PROGRAMMATION
       p.horaire.date Vendredi 7 juin 2019
@@ -28,8 +28,16 @@
   background-color: #000
 
 .schedule-size
-  width: 50%
-  margin-left: 25%
+  width: 25vw
+  margin-left: 50vw
+
+  +mobile
+    width: 80vw
+    margin-left: 10vw
+
+  +tablet
+    width: 60vw
+    margin-left: 20vw
 
 .prog
   padding-top: 0
@@ -48,9 +56,8 @@
   font-size: 70px
 
 .horaire
-  text-align: left
+  text-align: center
   width: 100%
-  padding-left: 25%
   font-family: "Montserrat-Medium"
   font-size: 18px
 
