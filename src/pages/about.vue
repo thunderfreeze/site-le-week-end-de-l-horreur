@@ -1,7 +1,7 @@
 <template lang="pug">
   section
     div.about-size
-      h2.pour-un-mechant QUESTION POUR UN MECHANT
+      h1.pour-un-mechant QUESTION POUR UN MECHANT
       h1.videodrome VIDEODROME-2
       h3.diffusion Diffusion cinématographique alternative
       p.place2 Videodrome 2 est avant tout un projet né de la volonté de rencontrer, d'échanger et d'experimenter.Projet porté par la SCOP DCA (Diffusion Cinématographique Alternative) et l'association Solaris en charge de al coordination de programmation, il souhaite offrir un lieu unique et polyvalent dédié a la diffusion cinématographique et la cinéphilie.
@@ -21,9 +21,12 @@
   color: #FFF
   margin-bottom: 0
   font-family: "Montserrat-Bold"
+  font-size: 0.75rem
+
+  +tablet
+    font-size: 1.75rem
 
 .pour-un-mechant
-  padding-bottom: 100px
   padding-top: 100px
   font-size: 80px
   font-family: "bloodlust"
@@ -31,10 +34,12 @@
 .diffusion
   font-family: "Montserrat-Medium"
 
+  +mobile
+    font-size: 0.5rem
+
 .place2
   padding-bottom: 30px
   text-align: left
-  font-size: 15px
   font-family: "Montserrat-Medium"
 </style>
 
