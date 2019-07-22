@@ -1,7 +1,16 @@
 <template lang="pug">
   section
     h2.question-pour-un-mechant QUESTION POUR UN MECHANT
-    h2.page 01/10
+    h2.page(v-if="answer_number == 1") 01/10
+    h2.page(v-if="answer_number == 2") 02/10
+    h2.page(v-if="answer_number == 3") 03/10
+    h2.page(v-if="answer_number == 4") 04/10
+    h2.page(v-if="answer_number == 5") 05/10
+    h2.page(v-if="answer_number == 6") 06/10
+    h2.page(v-if="answer_number == 7") 07/10
+    h2.page(v-if="answer_number == 8") 08/10
+    h2.page(v-if="answer_number == 9") 09/10
+    h2.page(v-if="answer_number == 10") 10/10
     p.bonne-reponse La bonne réponse était
 
     h1.answer-title-1.answer-title(v-if="answer_number == 1") LE FANTOME DE L'OPERA
@@ -53,7 +62,7 @@
     router-link.picture(v-if="answer_number == 9")(:to="{path: '/question/10'}")
       img.picture(src="static/images/Le-Loup.jpg")
 
-    router-link.picture(v-if="answer_number == 10")(:to="{name: '/a-propos/'}")
+    router-link.picture(v-if="answer_number == 10")(:to="{name: 'Schedule'}")
       img.picture(src="static/images/Psychose.jpg")
 
     p.diff.diffusion(v-if="answer_number == 1") Diffusé a 20:00

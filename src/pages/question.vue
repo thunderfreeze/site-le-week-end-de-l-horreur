@@ -1,7 +1,16 @@
 <template lang="pug">
   section
     h2.question-pour-un-mechant QUESTION POUR UN MECHANT
-    h2.page 01/10
+    h2.page(v-if="question_number == 1") 01/10
+    h2.page(v-if="question_number == 2") 02/10
+    h2.page(v-if="question_number == 3") 03/10
+    h2.page(v-if="question_number == 4") 04/10
+    h2.page(v-if="question_number == 5") 05/10
+    h2.page(v-if="question_number == 6") 06/10
+    h2.page(v-if="question_number == 7") 07/10
+    h2.page(v-if="question_number == 8") 08/10
+    h2.page(v-if="question_number == 9") 09/10
+    h2.page(v-if="question_number == 10") 10/10
 
     h1.question-title-1.question-title(v-if="question_number == 1") QUI DORT DANS UN OPERA POUR PECHO?
 
