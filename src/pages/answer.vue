@@ -4,13 +4,85 @@
     h2.page 01/10
     p.bonne-reponse La bonne réponse était
 
-    h1.fantome(v-if="answer_number == 1") LE FANTOME DE L'OPERA
+    h1.answer-title-1.answer-title(v-if="answer_number == 1") LE FANTOME DE L'OPERA
+
+    h1.answer-title-2.answer-title(v-if="answer_number == 2") L’HOMME QUI RIT
+
+    h1.answer-title-3.answer-title(v-if="answer_number == 3") DRACULA
+
+    h1.answer-title-4.answer-title(v-if="answer_number == 4") FRANKENSTEIN
+
+    h1.answer-title-5.answer-title(v-if="answer_number == 5") Dr JEKYL & Mr HIDE
+
+    h1.answer-title-6.answer-title(v-if="answer_number == 6") LA MOMIE
+
+    h1.answer-title-7.answer-title(v-if="answer_number == 7") LE CHAT NOIR
+
+    h1.answer-title-8.answer-title(v-if="answer_number == 8") LE CORBEAU
+
+    h1.answer-title-9.answer-title(v-if="answer_number == 9") LE LOUP GAROU
+
+    h1.answer-title-10.answer-title(v-if="answer_number == 10") PSYCHOSE
 
     img.picture(v-if="answer_number == 1")(src="static/images/fantome.jpg")
 
+    img.picture(v-if="answer_number == 2")(src="static/images/L'homme-qui-rit.jpg")
+
+    img.picture(v-if="answer_number == 3")(src="static/images/dracula.jpg")
+
+    img.picture(v-if="answer_number == 4")(src="static/images/frankenstein.jpg")
+
+    img.picture(v-if="answer_number == 5")(src="static/images/Dr-Jekyl-&-Mr-Hyde.jpg")
+
+    img.picture(v-if="answer_number == 6")(src="static/images/momie.jpg")
+
+    img.picture(v-if="answer_number == 7")(src="static/images/chat.jpg")
+
+    img.picture(v-if="answer_number == 8")(src="static/images/corbeau.jpg")
+
+    img.picture(v-if="answer_number == 9")(src="static/images/Le-Loup.jpg")
+
+    img.picture(v-if="answer_number == 10")(src="static/images/Psychose.jpg")
+
     p.diff.diffusion(v-if="answer_number == 1") Diffusé a 20:00
     p.diffusion(v-if="answer_number == 1") Le vendredi 7 juin 2019
-    p.diffusion(v-if="answer_number == 1")answer Au café-cinéma Videodrome-2 à Marseille   
+    p.diffusion(v-if="answer_number == 1") Au café-cinéma Videodrome-2 à Marseille   
+
+    p.diff.diffusion(v-if="answer_number == 2") Diffusé à 22:00  
+    p.diffusion(v-if="answer_number == 2") Le vendredi 7 juin 2019
+    p.diffusion(v-if="answer_number == 2") Au café-cinéma Videodrome-2 à Marseille  
+
+    p.diff.diffusion(v-if="answer_number == 3") Diffusé à 15:30
+    p.diffusion(v-if="answer_number == 3") Le samedi 8 juin 2019
+    p.diffusion(v-if="answer_number == 3") Au café-cinéma Videodrome-2 à Marseille  
+
+    p.diff.diffusion(v-if="answer_number == 4") Diffusé à 17:30
+    p.diffusion(v-if="answer_number == 4") Le samedi 8 juin 2019
+    p.diffusion(v-if="answer_number == 4") Au café-cinéma Videodrome-2 à Marseille  
+
+    p.diff.diffusion(v-if="answer_number == 5") Diffusé à 20:00
+    p.diffusion(v-if="answer_number == 5") Le samedi 8 juin 2019
+    p.diffusion(v-if="answer_number == 5") Au café-cinéma Videodrome-2 à Marseille 
+
+    p.diff.diffusion(v-if="answer_number == 6") Diffusé à 22:30
+    p.diffusion(v-if="answer_number == 6") Le samedi 8 juin 2019
+    p.diffusion(v-if="answer_number == 6") Au café-cinéma Videodrome-2 à Marseille 
+
+    p.diff.diffusion(v-if="answer_number == 7") Diffusé à 15:30
+    p.diffusion(v-if="answer_number == 7") Le dimanche 9 juin 2019
+    p.diffusion(v-if="answer_number == 7") Au café-cinéma Videodrome-2 à Marseille 
+
+    p.diff.diffusion(v-if="answer_number == 8") Diffusé à 17:30
+    p.diffusion(v-if="answer_number == 8") Le dimanche 9? 2019
+    p.diffusion(v-if="answer_number == 8") Au café-cinéma Videodrome-2 à Marseille 
+
+    p.diff.diffusion(v-if="answer_number == 9") Diffusé à 20:00 
+    p.diffusion(v-if="answer_number == 9") Le dimanche 9 juin 2019 
+    p.diffusion(v-if="answer_number == 9") Au café-cinéma Videodrome-2 à Marseille 
+
+    p.diff.diffusion(v-if="answer_number == 10") Diffusé à 22:00 
+    p.diffusion(v-if="answer_number == 10") Le dimanche 9 juin 2019 
+    p.diffusion(v-if="answer_number == 10") Au café-cinéma Videodrome-2 à Marseille 
 </template>
 
 <style lang="sass">
@@ -47,6 +119,55 @@
 .answer-10
   background-color: #000000
 //</BACKGROUND>//
+
+//<TITRE>//
+.answer-title
+  text-align: center
+  padding-top: 20px
+  font-size: 70px
+
+.answer-title-1
+  color: #F1C53E
+  font-family: "AvenirNextCondensed-HeavyItalic-10"
+
+.answer-title-2
+  color: #EDEAE3
+  font-family: "AvenirNextCondensed-DemiBold-03"
+  text-shadow: 5px 0 50px #FC270E
+
+.answer-title-3
+  color: #E42232
+  font-family: "American-Captain"
+  text-shadow: 0 0 50px #EBD860
+
+.answer-title-4
+  color: #DD481C
+  font-family: "manolete"
+
+.answer-title-5
+  color: #D4C95A
+  font-family: "slimlines"
+
+.answer-title-6
+  color: #FCCC37
+  font-family: "Melting-Letter"
+
+.answer-title-7
+  color: #EBE9CE
+  font-family: "ALYSHEN"
+
+.answer-title-8
+  color: #FAEC27
+  font-family: "DK-Magical-Brush"
+
+.answer-title-9
+  color: #E2C148
+  font-family: "Melting-Letter"
+
+.answer-title-10
+  color: #FBD800
+  font-family: "Compacta"
+//</TITRE>//
 .question-pour-un-mechant
   position: absolute
   left: 34px
