@@ -20,9 +20,9 @@
         li
           router-link(:to="{name: 'Schedule'}") Schedule
         li
-          router-link(:to="{path: 'question/1'}") Question
+          router-link(:to="{path: '/question/1'}") Question
         li
-          router-link(:to="{name: 'Answer'}") Answer
+          router-link(:to="{path: '/reponse/1'}") Answer
 
 </template>
 
