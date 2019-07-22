@@ -24,25 +24,37 @@
 
     h1.answer-title-10.answer-title(v-if="answer_number == 10") PSYCHOSE
 
-    img.picture(v-if="answer_number == 1")(src="static/images/fantome.jpg")
 
-    img.picture(v-if="answer_number == 2")(src="static/images/L'homme-qui-rit.jpg")
 
-    img.picture(v-if="answer_number == 3")(src="static/images/dracula.jpg")
+    router-link.picture(v-if="answer_number == 1")(:to="{path: '/question/2'}")
+      img(src="static/images/fantome.jpg")
 
-    img.picture(v-if="answer_number == 4")(src="static/images/frankenstein.jpg")
+    router-link.picture(v-if="answer_number == 2")(:to="{path: '/question/3'}")
+      img.picture(src="static/images/L'homme-qui-rit.jpg")
 
-    img.picture(v-if="answer_number == 5")(src="static/images/Dr-Jekyl-&-Mr-Hyde.jpg")
+    router-link.picture(v-if="answer_number == 3")(:to="{path: '/question/4'}")
+      img.picture(src="static/images/dracula.jpg")
 
-    img.picture(v-if="answer_number == 6")(src="static/images/momie.jpg")
+    router-link.picture(v-if="answer_number == 4")(:to="{path: '/question/5'}")
+      img.picture(src="static/images/frankenstein.jpg")
 
-    img.picture(v-if="answer_number == 7")(src="static/images/chat.jpg")
+    router-link.picture(v-if="answer_number == 5")(:to="{path: '/question/6'}")
+      img.picture(src="static/images/Dr-Jekyl-&-Mr-Hyde.jpg")
 
-    img.picture(v-if="answer_number == 8")(src="static/images/corbeau.jpg")
+    router-link.picture(v-if="answer_number == 6")(:to="{path: '/question/7'}")
+      img.picture(src="static/images/momie.jpg")
 
-    img.picture(v-if="answer_number == 9")(src="static/images/Le-Loup.jpg")
+    router-link.picture(v-if="answer_number == 7")(:to="{path: '/question/8'}")
+      img.picture(src="static/images/chat.jpg")
 
-    img.picture(v-if="answer_number == 10")(src="static/images/Psychose.jpg")
+    router-link.picture(v-if="answer_number == 8")(:to="{path: '/question/9'}")
+      img.picture(src="static/images/corbeau.jpg")
+
+    router-link.picture(v-if="answer_number == 9")(:to="{path: '/question/10'}")
+      img.picture(src="static/images/Le-Loup.jpg")
+
+    router-link.picture(v-if="answer_number == 10")(:to="{name: '/a-propos/'}")
+      img.picture(src="static/images/Psychose.jpg")
 
     p.diff.diffusion(v-if="answer_number == 1") Diffusé a 20:00
     p.diffusion(v-if="answer_number == 1") Le vendredi 7 juin 2019
