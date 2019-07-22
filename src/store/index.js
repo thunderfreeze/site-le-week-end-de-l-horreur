@@ -5,14 +5,31 @@ Vue.use(Vuex);
 
 const store = new Vuex.Store({
   state: {
-    score: 0
+    score: 0,
+    pastAnswers: []
   },
   getters: {
     score: state => state.score
   },
   mutations: {
     incrementScore(state) {
-      state.score++;
+      state.score < 10 ? state.score++ : state.score;
+    },
+    pastAnswer(state, answerNumber) {
+      state.pastAnswers.push(answerNumber);
+    }
+  },
+  actions: {
+    correctAnswer({ commit, state }, answerNumber) {
+      if (!state.pastAnswers.includes(answerNumber)) {
+        commit("pastAnswer", answerNumber);
+        commit("incrementScore");
+      }
+    },
+    wrongAnswer({ commit, state }, answerNumber) {
+      if (!state.pastAnswers.includes(answerNumber)) {
+        commit("pastAnswer", answerNumber);
+      }
     }
   }
 });
