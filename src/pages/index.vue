@@ -6,7 +6,7 @@
     p.but Pour découvrir la programmation, répond correctement à ce Quizz
     .container-cta
       p.blood POURMECHANT
-      router-link.commencer(:to="{name: 'Question'}") COMMENCER
+      router-link.commencer(:to="{path: '/question/1'}") COMMENCER
 </template>
 
 <style lang="sass">
