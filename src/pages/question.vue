@@ -23,11 +23,11 @@
 
     h1.question-title-10.question-title(v-if="question_number == 10") QUI ADORE REGARDER LES FILLES SOUS LA DOUCHE ?
 
-    router-link.reponse.reponse-1(v-if="question_number == 1")(:to="{path: '/reponse/' + question_number}") Les rats d'Opéra
-    router-link.reponse.reponse-1(v-if="question_number == 1")(:to="{path: '/reponse/' + question_number}") Le fantôme de l'Opéra
+    router-link.reponse.reponse-1(v-if="question_number == 1" :to="{path: '/reponse/' + question_number}") Les rats d'Opéra
+    router-link.reponse.reponse-1(v-if="question_number == 1" :to="{path: '/reponse/' + question_number}" @click.native="correctAnswer") Le fantôme de l'Opéra
     router-link.reponse.reponse-1(v-if="question_number == 1")(:to="{path: '/reponse/' + question_number}") La danseuse étoilée
 
-    router-link.reponse.reponse-2(v-if="question_number == 2")(:to="{path: '/reponse/' + question_number}") l'Homme qui rit
+    router-link.reponse.reponse-2(v-if="question_number == 2")(:to="{path: '/reponse/' + question_number}" @click.native="correctAnswer") l'Homme qui rit
     router-link.reponse.reponse-2(v-if="question_number == 2")(:to="{path: '/reponse/' + question_number}") Je préfère Signal
     router-link.reponse.reponse-2(v-if="question_number == 2")(:to="{path: '/reponse/' + question_number}") Miley Cirus
 
@@ -207,6 +207,11 @@
 <script>
 export default {
   name: "Question",
-  props: ["question_number"]
+  props: ["question_number"],
+  methods: {
+    correctAnswer() {
+      this.$store.commit("incrementScore");
+    }
+  }
 };
 </script>
