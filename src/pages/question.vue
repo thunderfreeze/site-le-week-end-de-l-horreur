@@ -23,45 +23,45 @@
 
     h1.question-title-10.question-title(v-if="question_number == 10") QUI ADORE REGARDER LES FILLES SOUS LA DOUCHE ?
 
-    router-link.reponse.reponse-1(v-if="question_number == 1" :to="{path: '/reponse/' + question_number}") Les rats d'Opéra
+    router-link.reponse.reponse-1(v-if="question_number == 1" :to="{path: '/reponse/' + question_number}" @click.native="wrongAnswer") Les rats d'Opéra
     router-link.reponse.reponse-1(v-if="question_number == 1" :to="{path: '/reponse/' + question_number}" @click.native="correctAnswer") Le fantôme de l'Opéra
-    router-link.reponse.reponse-1(v-if="question_number == 1")(:to="{path: '/reponse/' + question_number}") La danseuse étoilée
+    router-link.reponse.reponse-1(v-if="question_number == 1" :to="{path: '/reponse/' + question_number}" @click.native="wrongAnswer") La danseuse étoilée
 
-    router-link.reponse.reponse-2(v-if="question_number == 2")(:to="{path: '/reponse/' + question_number}" @click.native="correctAnswer") l'Homme qui rit
-    router-link.reponse.reponse-2(v-if="question_number == 2")(:to="{path: '/reponse/' + question_number}") Je préfère Signal
-    router-link.reponse.reponse-2(v-if="question_number == 2")(:to="{path: '/reponse/' + question_number}") Miley Cirus
+    router-link.reponse.reponse-2(v-if="question_number == 2" :to="{path: '/reponse/' + question_number}" @click.native="correctAnswer") l'Homme qui rit
+    router-link.reponse.reponse-2(v-if="question_number == 2" :to="{path: '/reponse/' + question_number}" @click.native="wrongAnswer") Je préfère Signal
+    router-link.reponse.reponse-2(v-if="question_number == 2" :to="{path: '/reponse/' + question_number}" @click.native="wrongAnswer") Miley Cirus
 
-    router-link.reponse.reponse-3(v-if="question_number == 3")(:to="{path: '/reponse/' + question_number}") Dracula
-    router-link.reponse.reponse-3(v-if="question_number == 3")(:to="{path: '/reponse/' + question_number}") Edward Collen
-    router-link.reponse.reponse-3(v-if="question_number == 3")(:to="{path: '/reponse/' + question_number}") Le petit vampire
+    router-link.reponse.reponse-3(v-if="question_number == 3" :to="{path: '/reponse/' + question_number}" @click.native="correctAnswer") Dracula
+    router-link.reponse.reponse-3(v-if="question_number == 3" :to="{path: '/reponse/' + question_number}" @click.native="wrongAnswer") Edward Collen
+    router-link.reponse.reponse-3(v-if="question_number == 3" :to="{path: '/reponse/' + question_number}" @click.native="wrongAnswer") Le petit vampire
 
-    router-link.reponse.reponse-4(v-if="question_number == 4")(:to="{path: '/reponse/' + question_number}") Remi
-    router-link.reponse.reponse-4(v-if="question_number == 4")(:to="{path: '/reponse/' + question_number}") Ton ami imaginaire
-    router-link.reponse.reponse-4(v-if="question_number == 4")(:to="{path: '/reponse/' + question_number}") Frankenstein
+    router-link.reponse.reponse-4(v-if="question_number == 4" :to="{path: '/reponse/' + question_number}" @click.native="wrongAnswer") Remi
+    router-link.reponse.reponse-4(v-if="question_number == 4" :to="{path: '/reponse/' + question_number}" @click.native="wrongAnswer") Ton ami imaginaire
+    router-link.reponse.reponse-4(v-if="question_number == 4" :to="{path: '/reponse/' + question_number}" @click.native="correctAnswer") Frankenstein
 
-    router-link.reponse.reponse-5(v-if="question_number == 5")(:to="{path: '/reponse/' + question_number}") Dr Jekyl & Mr Hide  
-    router-link.reponse.reponse-5(v-if="question_number == 5")(:to="{path: '/reponse/' + question_number}") Dr Jekyl
-    router-link.reponse.reponse-5(v-if="question_number == 5")(:to="{path: '/reponse/' + question_number}") Mr Hide
+    router-link.reponse.reponse-5(v-if="question_number == 5" :to="{path: '/reponse/' + question_number}" @click.native="correctAnswer") Dr Jekyl & Mr Hide  
+    router-link.reponse.reponse-5(v-if="question_number == 5" :to="{path: '/reponse/' + question_number}" @click.native="wrongAnswer") Dr Jekyl
+    router-link.reponse.reponse-5(v-if="question_number == 5" :to="{path: '/reponse/' + question_number}" @click.native="wrongAnswer") Mr Hide
 
-    router-link.reponse.reponse-6(v-if="question_number == 6")(:to="{path: '/reponse/' + question_number}") Un gendarme   
-    router-link.reponse.reponse-6(v-if="question_number == 6")(:to="{path: '/reponse/' + question_number}") Ton petit cousin fier d’être majeur
-    router-link.reponse.reponse-6(v-if="question_number == 6")(:to="{path: '/reponse/' + question_number}") La momie
+    router-link.reponse.reponse-6(v-if="question_number == 6" :to="{path: '/reponse/' + question_number}" @click.native="wrongAnswer") Un gendarme   
+    router-link.reponse.reponse-6(v-if="question_number == 6" :to="{path: '/reponse/' + question_number}" @click.native="wrongAnswer") Ton petit cousin fier d’être majeur
+    router-link.reponse.reponse-6(v-if="question_number == 6" :to="{path: '/reponse/' + question_number}" @click.native="correctAnswer") La momie
 
-    router-link.reponse.reponse-7(v-if="question_number == 7")(:to="{path: '/reponse/' + question_number}") Le Chat noir  
-    router-link.reponse.reponse-7(v-if="question_number == 7")(:to="{path: '/reponse/' + question_number}") Nyan Cat
-    router-link.reponse.reponse-7(v-if="question_number == 7")(:to="{path: '/reponse/' + question_number}") Je donne ma langue au chat
+    router-link.reponse.reponse-7(v-if="question_number == 7" :to="{path: '/reponse/' + question_number}" @click.native="correctAnswer") Le Chat noir  
+    router-link.reponse.reponse-7(v-if="question_number == 7" :to="{path: '/reponse/' + question_number}" @click.native="wrongAnswer") Nyan Cat
+    router-link.reponse.reponse-7(v-if="question_number == 7" :to="{path: '/reponse/' + question_number}" @click.native="wrongAnswer") Je donne ma langue au chat
 
-    router-link.reponse.reponse-8(v-if="question_number == 8")(:to="{path: '/reponse/' + question_number}") Je balance pas moi  
-    router-link.reponse.reponse-8(v-if="question_number == 8")(:to="{path: '/reponse/' + question_number}") J’y gagne quoi ?
-    router-link.reponse.reponse-8(v-if="question_number == 8")(:to="{path: '/reponse/' + question_number}") Le corbeau
+    router-link.reponse.reponse-8(v-if="question_number == 8" :to="{path: '/reponse/' + question_number}" @click.native="wrongAnswer") Je balance pas moi  
+    router-link.reponse.reponse-8(v-if="question_number == 8" :to="{path: '/reponse/' + question_number}" @click.native="wrongAnswer") J’y gagne quoi ?
+    router-link.reponse.reponse-8(v-if="question_number == 8" :to="{path: '/reponse/' + question_number}" @click.native="correctAnswer") Le corbeau
 
-    router-link.reponse.reponse-9(v-if="question_number == 9")(:to="{path: '/reponse/' + question_number}") Mere grand 
-    router-link.reponse.reponse-9(v-if="question_number == 9")(:to="{path: '/reponse/' + question_number}") Le loup garou
-    router-link.reponse.reponse-9(v-if="question_number == 9")(:to="{path: '/reponse/' + question_number}") Ta copine
+    router-link.reponse.reponse-9(v-if="question_number == 9" :to="{path: '/reponse/' + question_number}" @click.native="wrongAnswer") Mere grand 
+    router-link.reponse.reponse-9(v-if="question_number == 9" :to="{path: '/reponse/' + question_number}" @click.native="correctAnswer") Le loup garou
+    router-link.reponse.reponse-9(v-if="question_number == 9" :to="{path: '/reponse/' + question_number}" @click.native="wrongAnswer") Ta copine
 
-    router-link.reponse.reponse-10(v-if="question_number == 10")(:to="{path: '/reponse/' + question_number}") Les chats  
-    router-link.reponse.reponse-10(v-if="question_number == 10")(:to="{path: '/reponse/' + question_number}") Psychose
-    router-link.reponse.reponse-10(v-if="question_number == 10")(:to="{path: '/reponse/' + question_number}") Un voisin Voyeur
+    router-link.reponse.reponse-10(v-if="question_number == 10" :to="{path: '/reponse/' + question_number}" @click.native="wrongAnswer") Les chats  
+    router-link.reponse.reponse-10(v-if="question_number == 10" :to="{path: '/reponse/' + question_number}" @click.native="correctAnswer") Psychose
+    router-link.reponse.reponse-10(v-if="question_number == 10" :to="{path: '/reponse/' + question_number}" @click.native="wrongAnswer") Un voisin Voyeur
 </template>
 
 <style lang="sass">
@@ -210,7 +210,10 @@ export default {
   props: ["question_number"],
   methods: {
     correctAnswer() {
-      this.$store.commit("incrementScore");
+      this.$store.dispatch("correctAnswer", this.question_number);
+    },
+    wrongAnswer() {
+      this.$store.dispatch("wrongAnswer", this.question_number);
     }
   }
 };
