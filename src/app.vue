@@ -2,7 +2,7 @@
   section.main-container
     router-view
 
-    p.score Ton score: 08/10
+    p.score Ton score: {{score}}/10
 
     nav.menu
       ul
@@ -133,10 +133,10 @@ p
 <script>
 export default {
   name: "App",
-  data() {
-    return {
-      some_const: SOME_CONST
-    };
+  computed: {
+    score() {
+      return this.$store.getters.score;
+    }
   }
 };
 </script>
