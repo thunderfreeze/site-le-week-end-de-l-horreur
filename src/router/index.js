@@ -66,8 +66,6 @@ router.beforeEach((to, from, next) => {
   if (from.params.answer_number)
     fromBodyClass += `-${from.params.answer_number}`;
 
-  console.log(to);
-
   document.body.classList.add(toBodyClass);
   document.body.classList.remove(fromBodyClass);
 
