@@ -63,6 +63,12 @@ body
   width: 355px
   display: block
   margin: auto
+  padding: 0
+  transition: box-shadow .5s ease
+
+.picture:hover
+
+  box-shadow: 0 0 50px #FFF
 
 a
   color: #AEAEAE
@@ -70,7 +76,6 @@ a
   font-weight: 300
   text-decoration: none
   padding-left: 50px
-  display: inline-block
   vertical-align: middle
   font-family: "Montserrat-Light"
 
@@ -116,6 +121,8 @@ p
   bottom: 0
   right: 50px
   height: 65px
+  font-size: 30px
+  font-family: "BloodLust"
 
 .menu ul li
   display: inline
