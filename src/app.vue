@@ -1,7 +1,5 @@
 <template lang="pug">
   section.main-container
-    
-
     router-view
 
     p.score Ton score: 08/10
@@ -22,10 +20,9 @@
         li
           router-link(:to="{name: 'Schedule'}") Schedule
         li
-          router-link(:to="{name: 'Question'}") Question
+          router-link(:to="{path: 'question/1'}") Question
         li
           router-link(:to="{name: 'Answer'}") Answer
-
 
 </template>
 

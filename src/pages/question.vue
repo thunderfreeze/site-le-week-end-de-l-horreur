@@ -2,10 +2,13 @@
   section
     h2.question-pour-un-mechant QUESTION POUR UN MECHANT
     h2.page 01/10
-    h1.question-title QUI DORT DANS UN OPERA POUR PECHO?
-    p.reponse Les rats d'Opéra
-    p.reponse Le fantôme de l'Opéra
-    p.reponse La danseuse étoilée
+
+    h1.question-title(v-if="question_number == 1") QUI DORT DANS UN OPERA POUR PECHO?
+    h1.question-title(v-if="question_number == 2") LE DEUX.
+
+    router-link.reponse(:to="{path: '/reponse/' + question_number}") Les rats d'Opéra
+    router-link.reponse(:to="{path: '/reponse/' + question_number}") Le fantôme de l'Opéra
+    router-link.reponse(:to="{path: '/reponse/' + question_number}") La danseuse étoilée
 </template>
 
 <style lang="sass">
@@ -45,6 +48,7 @@ body
 
 <script>
 export default {
-  name: "Question"
+  name: "Question",
+  props: ["question_number"]
 };
 </script>

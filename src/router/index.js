@@ -29,17 +29,19 @@ const routes = [
     }
   },
   {
-    path: "/question",
+    path: "/question/:question_number",
     name: "Question",
     component: () => import("@/pages/question"),
+    props: true,
     meta: {
       bodyClass: "question"
     }
   },
   {
-    path: "/reponse",
+    path: "/reponse/:answer_number",
     name: "Answer",
     component: () => import("@/pages/answer"),
+    props: true,
     meta: {
       bodyClass: "answer"
     }
@@ -51,11 +53,17 @@ let router = new Router({
 });
 
 router.beforeEach((to, from, next) => {
-  document.body.classList.add(to.meta.bodyClass);
-  document.body.classList.remove(from.meta.bodyClass);
+  let toBodyClass = to.meta.bodyClass;
+  let fromBodyClass = from.meta.bodyClass;
 
-  console.log("from", from.meta.bodyClass);
-  console.log("to", to.meta.bodyClass);
+  if (to.params.question_number)
+    toBodyClass += `-${to.params.question_number}`
+
+  if (from.params.question_number)
+    fromBodyClass += `-${from.params.question_number}`
+
+  document.body.classList.add(toBodyClass);
+  document.body.classList.remove(fromBodyClass);
 
   next();
 });
