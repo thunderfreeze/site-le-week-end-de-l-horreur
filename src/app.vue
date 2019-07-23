@@ -7,9 +7,9 @@
     nav.menu
       ul
         li
-          router-link(:to="{name: 'About'}") A propos
+          router-link.about-link(:to="{name: 'About'}") À propos
         li
-          router-link(:to="{name: 'Schedule'}") Horaires
+          router-link.schedule-link(:to="{name: 'Schedule'}") Horaires
 
     nav.debug
       ul
@@ -30,6 +30,7 @@
 @import "minireset.css/minireset.sass"
 @import "utilities/transitions.sass"
 @import "fonts/_all.sass"
+@import "layout/_all.sass"
 
 
 html
@@ -53,6 +54,29 @@ body
     .score
       display: none
 
+body
+  &.about
+    .about-link
+      color: #FFF
+
+body
+  &.schedule
+    .schedule-link
+      color: #FFF
+
+body
+  &.schedule
+    .score
+      display: none
+
+body
+  &.about
+    .score
+      display: none
+
+    .main-container
+      display: inherit
+
 .debug
   position: fixed
   top: 0
@@ -75,9 +99,11 @@ a
   font-size: 25px
   font-weight: 300
   text-decoration: none
-  padding-left: 50px
   vertical-align: middle
   font-family: "Montserrat-Light"
+
+.menu ul li
+  padding-left: 50px
 
 h1
   color: #E00000
@@ -115,6 +141,16 @@ p
 .main-container
   position: relative
   height: 100vh
+  display: flex
+  flex-direction: column
+  justify-content: center
+  //background-color: yellow
+
+.section
+  display: flex
+  flex-direction: column
+  //background-color: blue
+  align-items: center
 
 .score
   position: fixed
