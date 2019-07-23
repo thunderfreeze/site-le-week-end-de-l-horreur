@@ -24,6 +24,8 @@
 .container-cta
   position: relative
   margin-top: 86px
+  display: flex
+  justify-content: center
 
 .blood
   font-family: "bloodlust"
@@ -56,7 +58,7 @@
   text-align: center
   text-decoration: none
   padding-bottom: 10px
-  letter-spacing: 9px
+  letter-spacing: 5px
   font-family: "Montserrat-Bold"
 </style>
 
