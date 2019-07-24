@@ -1,6 +1,7 @@
 <template lang="pug">
   section.main-container
-    router-view
+    transition(name = "fade" mode="out-in")
+      router-view
 
     p.score(v-if="pastAnswers.length > 0") Ton score: {{score}}/10
 
@@ -50,6 +51,8 @@ html
 
 
 body
+  transition: background-color $duration $duration
+
   &.home
     .score
       display: none
@@ -58,6 +61,15 @@ body
   &.about
     .about-link
       color: #FFF
+
+body
+  &.answer
+    .question-answer-title
+      animation-duration: .5s
+      animation-delay: 1.25s
+      animation-name: fade
+      opacity: 0
+      animation-fill-mode: forwards
 
 body
   &.schedule
@@ -90,14 +102,6 @@ body
   text-decoration: none
   padding-bottom: 10px
   font-family: "Montserrat-Bold"
-
-.picture
-  height: 487px
-  width: 355px
-  display: block
-  margin: auto
-  padding: 0
-  transition: box-shadow .5s ease
 
 .picture:hover
   box-shadow: 0 0 50px #FFF
