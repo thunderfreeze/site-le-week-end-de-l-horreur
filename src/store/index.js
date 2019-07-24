@@ -9,14 +9,15 @@ const store = new Vuex.Store({
     pastAnswers: []
   },
   getters: {
-    score: state => state.score
+    score: state => state.score,
+    pastAnswers: state => state.pastAnswers
   },
   mutations: {
     incrementScore(state) {
       state.score < 10 ? state.score++ : state.score;
     },
     pastAnswer(state, answerNumber) {
-      state.pastAnswers.push(answerNumber);
+      state.pastAnswers.push(parseInt(answerNumber));
     }
   },
   actions: {
