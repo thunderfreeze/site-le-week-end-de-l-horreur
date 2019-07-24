@@ -13,25 +13,25 @@
     h2.page(v-if="answer_number == 10") 10/10
     p.bonne-reponse La bonne réponse était
 
-    h1.question-answer-title-1.question-answer-title(v-if="answer_number == 1") LE FANTOME DE L'OPERA
+    h1.question-answer-title-1.question-answer-title.fade-in(v-if="answer_number == 1") LE FANTOME DE L'OPERA
 
-    h1.question-answer-title-2.question-answer-title(v-if="answer_number == 2") L’HOMME QUI RIT
+    h1.question-answer-title-2.question-answer-title.fade-in(v-if="answer_number == 2") L’HOMME QUI RIT
 
-    h1.question-answer-title-3.question-answer-title(v-if="answer_number == 3") DRACULA
+    h1.question-answer-title-3.question-answer-title.fade-in(v-if="answer_number == 3") DRACULA
 
-    h1.question-answer-title-4.question-answer-title(v-if="answer_number == 4") FRANKENSTEIN
+    h1.question-answer-title-4.question-answer-title.fade-in(v-if="answer_number == 4") FRANKENSTEIN
 
-    h1.question-answer-title-5.question-answer-title(v-if="answer_number == 5") Dr JEKYLL & Mr HYDE
+    h1.question-answer-title-5.question-answer-title.fade-in(v-if="answer_number == 5") Dr JEKYLL & Mr HYDE
 
-    h1.question-answer-title-6.question-answer-title(v-if="answer_number == 6") LA MOMIE
+    h1.question-answer-title-6.question-answer-title.fade-in(v-if="answer_number == 6") LA MOMIE
 
-    h1.question-answer-title-7.question-answer-title(v-if="answer_number == 7") LE CHAT NOIR
+    h1.question-answer-title-7.question-answer-title.fade-in(v-if="answer_number == 7") LE CHAT NOIR
 
-    h1.question-answer-title-8.question-answer-title(v-if="answer_number == 8") LE CORBEAU
+    h1.question-answer-title-8.question-answer-title.fade-in(v-if="answer_number == 8") LE CORBEAU
 
-    h1.question-answer-title-9.question-answer-title(v-if="answer_number == 9") LE LOUP GAROU
+    h1.question-answer-title-9.question-answer-title.fade-in(v-if="answer_number == 9") LE LOUP GAROU
 
-    h1.question-answer-title-10.question-answer-title(v-if="answer_number == 10") PSYCHOSE
+    h1.question-answer-title-10.question-answer-title.fade-in(v-if="answer_number == 10") PSYCHOSE
 
 
 

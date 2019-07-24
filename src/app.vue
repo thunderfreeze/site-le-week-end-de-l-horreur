@@ -64,7 +64,7 @@ body
 
 body
   &.answer
-    .question-answer-title
+    .fade-in
       animation-duration: .5s
       animation-delay: 1.25s
       animation-name: fade
