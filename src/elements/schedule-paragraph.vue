@@ -1,6 +1,6 @@
 <template lang="pug">
   p.horaire 
-    slot(v-if="pastAnswers.includes(answerNumber)")
+    slot(v-if="correctAnswers.includes(answerNumber) || pastAnswers.length == 10")
     span(v-else) trouve la bonne reponse
 </template>
 
@@ -9,6 +9,9 @@ export default {
   name: "ScheduleParagraph",
   props: ["answer-number"],
   computed: {
+    correctAnswers() {
+      return this.$store.getters.correctAnswers;
+    },
     pastAnswers() {
       return this.$store.getters.pastAnswers;
     }
