@@ -21,19 +21,6 @@
   align-items: center
   justify-content: space-around
 
-.container-cta
-  position: relative
-  margin-top: 86px
-  display: flex
-  justify-content: center
-
-.blood
-  font-family: "bloodlust"
-  top: 10px
-  font-size: 97px
-  position: absolute
-  color: red
-
 .title
   padding-top: 134px
   padding-bottom: 43px
@@ -42,23 +29,6 @@
 
 .but
   padding-top: 166.83px
-  font-family: "Montserrat-Bold"
-
-.commencer
-  display: block
-  position: relative
-  font-size: 48px
-  background-color: #E00000
-  color: #FFF
-  width: 470px
-  border-radius: 25px
-  border-color: red
-  padding-top: 10px
-  padding-left: 0
-  text-align: center
-  text-decoration: none
-  padding-bottom: 10px
-  letter-spacing: 5px
   font-family: "Montserrat-Bold"
 </style>
 

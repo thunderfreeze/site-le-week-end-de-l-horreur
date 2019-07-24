@@ -81,7 +81,7 @@
     p.diffusion(v-if="answer_number == 4") Le samedi 8 juin 2019
     p.diffusion(v-if="answer_number == 4") Au café-cinéma Videodrome-2 à Marseille  
 
-    p.diff.diffusion(v-if="answer_number == 5") Diffusé à 20:00</span>
+    p.diff.diffusion(v-if="answer_number == 5") Diffusé à 20:00 </span>
     p.diffusion(v-if="answer_number == 5") Le samedi 8 juin 2019
     p.diffusion(v-if="answer_number == 5") Au café-cinéma Videodrome-2 à Marseille 
 
