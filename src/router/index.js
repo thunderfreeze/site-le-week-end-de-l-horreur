@@ -56,6 +56,10 @@ router.beforeEach((to, from, next) => {
   let toBodyClass = to.meta.bodyClass;
   let fromBodyClass = from.meta.bodyClass;
 
+  if (to.name == "Answer") toBodyClass += " answer";
+  if (from.name == "Answer") fromBodyClass += " answer";
+  console.log(to, from);
+
   if (to.params.question_number) toBodyClass += `-${to.params.question_number}`;
 
   if (from.params.question_number)
@@ -66,8 +70,10 @@ router.beforeEach((to, from, next) => {
   if (from.params.answer_number)
     fromBodyClass += `-${from.params.answer_number}`;
 
-  document.body.classList.add(toBodyClass);
-  document.body.classList.remove(fromBodyClass);
+  document.body.classList.add(...toBodyClass.split(" "));
+
+  if (fromBodyClass != undefined)
+    document.body.classList.remove(...fromBodyClass.split(" "));
 
   next();
 });
