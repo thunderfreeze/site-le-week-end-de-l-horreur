@@ -1,7 +1,9 @@
 <template lang="pug">
   section.main-container
-    transition(name = "fade" mode="out-in")
+    transition(:name = "transitionName" mode="out-in")
       router-view
+
+    
 
     p.score(v-if="pastAnswers.length > 0") Ton score: {{score}}/10
 
@@ -218,12 +220,25 @@ p
 <script>
 export default {
   name: "App",
+  data() {
+    return {
+      transitionName: "fade"
+    };
+  },
   computed: {
     score() {
       return this.$store.getters.score;
     },
     pastAnswers() {
       return this.$store.getters.pastAnswers;
+    }
+  },
+  watch: {
+    $route(to, from) {
+      console.log(to, from);
+      if (to.name == "About" && from.name == "Question")
+        this.transitionName = "slide-top";
+      else this.transitionName = "fade";
     }
   }
 };
