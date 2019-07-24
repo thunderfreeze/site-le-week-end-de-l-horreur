@@ -20,12 +20,32 @@
       p.adresse.pad AU CINEMA-CAFE VIDEODROME-2
       p.adresse 49 Cours Julien - 13006 Marseille
       p.adresse 04 91 42 75 41
+
+      a.reprendre(href="" @click.prevent="resume") REPRENDRE
 </template>
 
 <style lang="sass">
 
 .schedule
   background-color: #000
+
+.reprendre
+  display: block
+  position: absolute
+  font-size: 22px
+  background-color: #E00000
+  color: #FFF
+  width: 171px
+  border-radius: 25px
+  border-color: red
+  padding-top: 10px
+  padding-left: 0
+  right: 200px
+  bottom: 110px
+  text-align: center
+  text-decoration: none
+  padding-bottom: 10px
+  font-family: "Montserrat-Bold"
 
 .schedule-size
   width: 25vw
@@ -75,6 +95,11 @@
 
 <script>
 export default {
-  name: "Schedule"
+  name: "Schedule",
+  methods: {
+    resume() {
+      this.$router.go(-1);
+    }
+  }
 };
 </script>
