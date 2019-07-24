@@ -35,8 +35,8 @@
 
 
 
-    router-link.picture(v-if="answer_number == 1")(:to="{path: '/question/2'}")
-      img(src="static/images/fantome.jpg")
+    router-link(v-if="answer_number == 1")(:to="{path: '/question/2'}")
+      img.picture(src="static/images/fantome.jpg")
 
     router-link.picture(v-if="answer_number == 2")(:to="{path: '/question/3'}")
       img.picture(src="static/images/L'homme-qui-rit.jpg")
@@ -81,7 +81,7 @@
     p.diffusion(v-if="answer_number == 4") Le samedi 8 juin 2019
     p.diffusion(v-if="answer_number == 4") Au café-cinéma Videodrome-2 à Marseille  
 
-    p.diff.diffusion(v-if="answer_number == 5") Diffusé à 20:00 </span>
+    p.diff.diffusion(v-if="answer_number == 5") <span class="bold">Diffusé à 20:00 </span>
     p.diffusion(v-if="answer_number == 5") Le samedi 8 juin 2019
     p.diffusion(v-if="answer_number == 5") Au café-cinéma Videodrome-2 à Marseille 
 
@@ -125,6 +125,17 @@
 .diffusion
   font-family: "Montserrat-Medium"
   font-size: 25px
+  animation-duration: .5s
+  animation-delay: 1.25s
+  animation-name: fade
+  opacity: 0
+  animation-fill-mode: forwards
+
+@keyframes fade
+  from
+    opacity: 0
+  to
+    opacity: 1
 
 .page
   position: absolute
@@ -138,6 +149,28 @@
   padding-top: 62px
   padding-bottom: 50px
   font-family: "Montserrat-Medium"
+  animation-duration: .5s
+  animation-delay: 1s
+  animation-name: fade
+  opacity: 0
+  animation-fill-mode: forwards
+
+.picture
+  height: 487px
+  width: 355px
+  display: block
+  margin: auto
+  padding: 0
+  transition: box-shadow .5s ease
+  animation-duration: 1.25s
+  animation-name: slidein
+  animation-timing-function: cubic-bezier(0.1, 0.14, 0.4, 1.53)
+
+@keyframes slidein
+  from
+    transform: scale(0,0)
+  to
+    transform: scale(1,1)
 
 .fantome
   font-family: "Montserrat-Bold"
