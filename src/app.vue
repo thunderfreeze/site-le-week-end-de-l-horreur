@@ -2,7 +2,7 @@
   section.main-container
     router-view
 
-    p.score Ton score: {{score}}/10
+    p.score(v-if="pastAnswers.length > 0") Ton score: {{score}}/10
 
     nav.menu
       ul
@@ -64,16 +64,6 @@ body
     .schedule-link
       color: #FFF
 
-body
-  &.schedule
-    .score
-      display: none
-
-body
-  &.about
-    .score
-      display: none
-
     .main-container
       display: inherit
 
@@ -81,6 +71,25 @@ body
   position: fixed
   top: 0
   left: 0
+
+.reprendre
+  display: block
+  position: absolute
+  font-size: 22px
+  background-color: #E00000
+  color: #FFF
+  width: 171px
+  border-radius: 25px
+  border-color: red
+  padding-top: 10px
+  padding-left: 0
+  right: 50px
+  bottom: 110px
+  position: fixed
+  text-align: center
+  text-decoration: none
+  padding-bottom: 10px
+  font-family: "Montserrat-Bold"
 
 .picture
   height: 487px
@@ -91,8 +100,37 @@ body
   transition: box-shadow .5s ease
 
 .picture:hover
-
   box-shadow: 0 0 50px #FFF
+
+.container-cta
+  position: relative
+  margin-top: 86px
+  display: flex
+  justify-content: center
+
+.blood
+  font-family: "bloodlust"
+  top: 10px
+  font-size: 97px
+  position: absolute
+  color: red
+
+.commencer
+  display: block
+  position: relative
+  font-size: 48px
+  background-color: #E00000
+  color: #FFF
+  width: 470px
+  border-radius: 25px
+  border-color: red
+  padding-top: 10px
+  padding-left: 0
+  text-align: center
+  text-decoration: none
+  padding-bottom: 10px
+  letter-spacing: 5px
+  font-family: "Montserrat-Bold"
 
 a
   color: #AEAEAE
@@ -179,6 +217,9 @@ export default {
   computed: {
     score() {
       return this.$store.getters.score;
+    },
+    pastAnswers() {
+      return this.$store.getters.pastAnswers;
     }
   }
 };
