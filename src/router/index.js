@@ -58,7 +58,6 @@ router.beforeEach((to, from, next) => {
 
   if (to.name == "Answer") toBodyClass += " answer";
   if (from.name == "Answer") fromBodyClass += " answer";
-  console.log(to, from);
 
   if (to.params.question_number) toBodyClass += `-${to.params.question_number}`;
 
