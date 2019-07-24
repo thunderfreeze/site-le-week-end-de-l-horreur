@@ -6,3 +6,13 @@
 .fade-enter-active,
 .fade-leave-active
   transition: opacity $duration
+
+
+.slide-top-enter,
+.slide-top-leave-to
+  opacity: 0
+  transform: translate(0, 2rem)
+
+.slide-top-enter-active,
+.slide-top-leave-active
+  transition: opacity $duration1000, transform $duration1000
