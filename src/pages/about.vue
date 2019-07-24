@@ -8,8 +8,9 @@
       p.place2 Situé au coeur de Marseille au 49 cours Julien, il reunit une salle de cinéma de 49 places accueillant 6 projections hebdomadaires non commerciales, un vidéoclub au catalogue locatif de plus de 5400 films, de la rareté aux classiques en provenance des 4 coins du monde et un bistrot ou café-cinéma
       p.place2 Du 7 au 9 juin prochain, se deroulera au Vidéodrome-2, al premeire édition de week-end de l'horreur. Pour découvrir la programmation et les horaires des films, un mini-quizz est organisé. Répondez correctement!
       .container-cta
-        p.blood POURMECHANT
-        router-link.commencer(:to="{path: '/question/1'}") COMMENCER
+        p.blood(v-if="pastAnswers.length == 0") POURMECHANT
+        router-link.commencer(v-if="pastAnswers.length == 0" :to="{path: '/question/1'}") COMMENCER
+      a.reprendre(v-if="pastAnswers.length > 0 && pastAnswers.length != 10" href="" @click.prevent="resume") REPRENDRE
 </template>
 
 <style lang="sass">
@@ -47,6 +48,16 @@
 
 <script>
 export default {
-  name: "About"
+  name: "About",
+  computed: {
+    pastAnswers() {
+      return this.$store.getters.pastAnswers;
+    }
+  },
+  methods: {
+    resume() {
+      this.$router.go(-1);
+    }
+  }
 };
 </script>
