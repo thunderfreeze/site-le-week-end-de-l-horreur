@@ -236,8 +236,20 @@ export default {
   watch: {
     $route(to, from) {
       console.log(to, from);
-      if (to.name == "About" && from.name == "Question")
+      if (
+        (to.name == "About" && from.name == "Question") ||
+        (to.name == "Schedule" && from.name == "Question") ||
+        (to.name == "About" && from.name == "Answer") ||
+        (to.name == "Schedule" && from.name == "Answer")
+      )
         this.transitionName = "slide-top";
+      else if (
+        (to.name == "Question" && from.name == "About") ||
+        (to.name == "Question" && from.name == "Schedule") ||
+        (to.name == "Answer" && from.name == "About") ||
+        (to.name == "Answer" && from.name == "Schedule")
+      )
+        this.transitionName = "slide-bottom";
       else this.transitionName = "fade";
     }
   }
