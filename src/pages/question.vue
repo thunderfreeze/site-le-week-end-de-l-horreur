@@ -1,17 +1,5 @@
 <template lang="pug">
-  section
-    h2.question-pour-un-mechant QUESTION POUR UN MECHANT
-    h2.page(v-if="question_number == 1") 01/10
-    h2.page(v-if="question_number == 2") 02/10
-    h2.page(v-if="question_number == 3") 03/10
-    h2.page(v-if="question_number == 4") 04/10
-    h2.page(v-if="question_number == 5") 05/10
-    h2.page(v-if="question_number == 6") 06/10
-    h2.page(v-if="question_number == 7") 07/10
-    h2.page(v-if="question_number == 8") 08/10
-    h2.page(v-if="question_number == 9") 09/10
-    h2.page(v-if="question_number == 10") 10/10
-
+  section.question-container
 
     h1.question-answer-title-1.question-answer-title(v-if="question_number == 1") QUI DORT DANS UN OPERA POUR PECHO?
 
@@ -83,19 +71,12 @@
 </template>
 
 <style lang="sass">
-
-
-.question-pour-un-mechant
-  position: absolute
-  left: 34px
-  top: 34px
-  color: white
-  font-size: 40px
-  font-family: "Bloodlust"
-
+.question-container
+  position: relative
 
 .relative-container
   position: relative
+
 .crack
   position: absolute
 
@@ -119,13 +100,6 @@
   top: 35%
   left: 42%
 
-.page
-  position: absolute
-  right: 42px
-  top: 34px
-  color: white
-  font-size: 40px
-  font-family: "Bloodlust"
 //<REPONSE>//
 .reponse
   font-size: 30px
