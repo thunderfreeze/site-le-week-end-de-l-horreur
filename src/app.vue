@@ -25,18 +25,18 @@
         li
           router-link.schedule-link(:to="{name: 'Schedule'}") Horaires
 
-    nav.debug
-      ul
-        li
-          router-link(:to="{name: 'Home'}") Home
-        li
-          router-link(:to="{name: 'About'}") About
-        li
-          router-link(:to="{name: 'Schedule'}") Schedule
-        li
-          router-link(:to="{path: '/question/1'}") Question
-        li
-          router-link(:to="{path: '/reponse/1'}") Answer
+    //- nav.debug
+    //-   ul
+    //-     li
+    //-       router-link(:to="{name: 'Home'}") Home
+    //-     li
+    //-       router-link(:to="{name: 'About'}") About
+    //-     li
+    //-       router-link(:to="{name: 'Schedule'}") Schedule
+    //-     li
+    //-       router-link(:to="{path: '/question/1'}") Question
+    //-     li
+    //-       router-link(:to="{path: '/reponse/1'}") Answer
 
     a.reprendre(v-if="pastAnswers.length > 0 && pastAnswers.length != 10" href="" @click.prevent="resume") REPRENDRE
 
@@ -64,7 +64,6 @@ html
 
   +fullhd
     font-size: 1.5625vw
-
 
 body
   transition: background-color $duration $duration
@@ -157,9 +156,12 @@ body
 .blood
   font-family: "bloodlust"
   top: 10px
-  font-size: 97px
+  font-size: 2.75rem
   position: absolute
   color: red
+
+  +from($tablet)
+    font-size: 3.75rem
 
 a
   color: #AEAEAE
@@ -169,18 +171,17 @@ a
   vertical-align: middle
   font-family: "Montserrat-Light"
 
-.menu ul li
-  padding-left: 50px
-
 p
   text-align: center
-  font-size: 1rem
+  font-size: 0.75rem
   color: #FFF
   margin: 0
 
+  +from($tablet)
+    font-size: 1rem
+
 .main-container
   position: relative
-  height: 100vh
   display: flex
   flex-direction: column
   justify-content: center
@@ -193,21 +194,41 @@ p
   align-items: center
 
 .score
-  position: fixed
-  bottom: 0
-  right: 50px
-  height: 65px
-  font-size: 30px
+  position: absolute
+  bottom: -2rem
+  width: 100%
+  font-size: 1rem
+  margin:  auto
   font-family: "BloodLust"
+
+  +from($tablet)
+    position: fixed
+    right: 50px
+    height: 65px
+    bottom: 0
+    width: auto
 
 .menu ul li
   display: inline
 
+.menu ul li
+  padding-left: 2.25rem
+
+  +from($tablet)
+    padding-left: 2rem
+
+
 .menu
-  position: fixed
-  bottom: 0
-  width: 408px
+  position: absolute
+  bottom: -30vw
+  width: 100%
   height: 65px
+
+  +from($tablet)
+    position: fixed
+    bottom: 0
+    width: 408px
+    height: 65px
 
 .active
   color: #FFF
