@@ -1,25 +1,25 @@
 <template lang="pug">
   section.question-container
 
-    h1.question-answer-title-1.question-answer-title(v-if="question_number == 1") QUI DORT DANS UN OPERA POUR PECHO?
+    h1.question-answer-title-1.question-answer-title.centered(v-if="question_number == 1") QUI DORT DANS UN OPERA POUR PECHO?
 
-    h1.question-answer-title-2.question-answer-title(v-if="question_number == 2") QUI A UN SOURIRE À LA COLGATE ?
+    h1.question-answer-title-2.question-answer-title.centered(v-if="question_number == 2") QUI A UN SOURIRE À LA COLGATE ?
 
-    h1.question-answer-title-3.question-answer-title(v-if="question_number == 3") QUI EST LE PLUS GRAND DE TOUS LES VAMPIRES ?
+    h1.question-answer-title-3.question-answer-title.centered(v-if="question_number == 3") QUI EST LE PLUS GRAND DE TOUS LES VAMPIRES ?
 
-    h1.question-answer-title-4.question-answer-title(v-if="question_number == 4") QUI N'AVAIT PAS D'AMIS ?
+    h1.question-answer-title-4.question-answer-title.centered(v-if="question_number == 4") QUI N'AVAIT PAS D'AMIS ?
 
-    h1.question-answer-title-5.question-answer-title(v-if="question_number == 5") QUI EST CONNU POUR SES DEUX PERSONNALITE ?
+    h1.question-answer-title-5.question-answer-title.centered(v-if="question_number == 5") QUI EST CONNU POUR SES DEUX PERSONNALITE ?
 
-    h1.question-answer-title-6.question-answer-title(v-if="question_number == 6") Qui a toujours ses papiers sur lui ?
+    h1.question-answer-title-6.question-answer-title.centered(v-if="question_number == 6") Qui a toujours ses papiers sur lui ?
 
-    h1.question-answer-title-7.question-answer-title(v-if="question_number == 7") Qui est le chat le plus mÉCHANT ?
+    h1.question-answer-title-7.question-answer-title.centered(v-if="question_number == 7") Qui est le chat le plus mÉCHANT ?
 
-    h1.question-answer-title-8.question-answer-title(v-if="question_number == 8") Qui est une balance ?
+    h1.question-answer-title-8.question-answer-title.centered(v-if="question_number == 8") Qui est une balance ?
 
-    h1.question-answer-title-9.question-answer-title(v-if="question_number == 9") Qui n’est pas alle Chez l’esthEticienne depuis 3 mois ?
+    h1.question-answer-title-9.question-answer-title.centered(v-if="question_number == 9") Qui n’est pas alle Chez l’esthEticienne depuis 3 mois ?
 
-    h1.question-answer-title-10.question-answer-title(v-if="question_number == 10") 
+    h1.question-answer-title-10.question-answer-title.centered(v-if="question_number == 10") 
       <span class="relative-container">QUI ADORE <img class="crack1 crack" src="static/images/crack1.svg"> </span>
 
       <span class="relative-container">REGARDER LES FILLES <img class=" crack3 crack" src="static/images/crack3.svg"><img class=" crack4 crack" src="static/images/crack4.svg"></span> 
