@@ -15,21 +15,28 @@
 
 .page-container
   position: relative
-  height: 840px
   display: flex
   flex-direction: column
   align-items: center
-  justify-content: space-around
 
-.title
-  padding-top: 134px
-  padding-bottom: 43px
-  margin: 0 auto
-  font-family: "bloodlust"
+  +from($tablet)
+    justify-content: space-around
+    height: 840px
+
+.place
+  padding-top: 1rem
+  padding-bottom: 1rem
+
+  +from($tablet)
+    padding-top: 0
+    padding-bottom: 0
+
 
 .but
-  padding-top: 166.83px
   font-family: "Montserrat-Bold"
+
+  +from($tablet)
+    padding-top: 5rem
 </style>
 
 <script>
