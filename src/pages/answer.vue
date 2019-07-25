@@ -1,16 +1,6 @@
 <template lang="pug">
   section
-    h2.question-pour-un-mechant QUESTION POUR UN MECHANT
-    h2.page(v-if="answer_number == 1") 01/10
-    h2.page(v-if="answer_number == 2") 02/10
-    h2.page(v-if="answer_number == 3") 03/10
-    h2.page(v-if="answer_number == 4") 04/10
-    h2.page(v-if="answer_number == 5") 05/10
-    h2.page(v-if="answer_number == 6") 06/10
-    h2.page(v-if="answer_number == 7") 07/10
-    h2.page(v-if="answer_number == 8") 08/10
-    h2.page(v-if="answer_number == 9") 09/10
-    h2.page(v-if="answer_number == 10") 10/10
+  
     p.bonne-reponse La bonne réponse était
 
     h1.question-answer-title-1.question-answer-title.fade-in(v-if="answer_number == 1") LE FANTOME DE L'OPERA
@@ -107,15 +97,6 @@
 </template>
 
 <style lang="sass">
-
-.question-pour-un-mechant
-  position: absolute
-  left: 34px
-  top: 34px
-  color: white
-  font-size: 40px
-  font-family: "Bloodlust"
-
 .diff
   padding-top: 50px
 
@@ -136,14 +117,6 @@
     opacity: 0
   to
     opacity: 1
-
-.page
-  position: absolute
-  right: 42px
-  top: 34px
-  color: white
-  font-size: 40px
-  font-family: "Bloodlust"
 
 .bonne-reponse
   padding-top: 62px
