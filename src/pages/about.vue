@@ -10,7 +10,6 @@
       .container-cta
         p.blood(v-if="pastAnswers.length == 0") POURMECHANT
         router-link.commencer(v-if="pastAnswers.length == 0" :to="{path: '/question/1'}") COMMENCER
-      a.reprendre(v-if="pastAnswers.length > 0 && pastAnswers.length != 10" href="" @click.prevent="resume") REPRENDRE
 </template>
 
 <style lang="sass">
