@@ -14,30 +14,23 @@
 
 <style lang="sass">
 .about-size
-  width: 50%
+  width: 80%
+
+  +from($tablet)
+    width: 50%
 
 .about
   background-color: #000
 
-.videodrome
-  color: #FFF
-  margin-bottom: 0
-  font-family: "Montserrat-Bold"
-  font-size: 0.75rem
-
   +tablet
     font-size: 1.75rem
 
-.pour-un-mechant
-  padding-top: 5rem
-  font-size: 80px
-  font-family: "bloodlust"
-
 .diffusion
   font-family: "Montserrat-Medium"
+  font-size: 0.75rem
 
-  +mobile
-    font-size: 0.5rem
+  +from($tablet)
+    font-size: 1.25rem
 
 .place2
   padding-bottom: 30px
