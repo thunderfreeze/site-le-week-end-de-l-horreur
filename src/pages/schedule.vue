@@ -21,7 +21,7 @@
       p.adresse 49 Cours Julien - 13006 Marseille
       p.adresse 04 91 42 75 41
 
-      a.reprendre(v-if="pastAnswers.length > 0 && pastAnswers.length != 10" href="" @click.prevent="resume") REPRENDRE
+      
 </template>
 
 <style lang="sass">
@@ -80,11 +80,6 @@ export default {
   computed: {
     pastAnswers() {
       return this.$store.getters.pastAnswers;
-    }
-  },
-  methods: {
-    resume() {
-      this.$router.go(-1);
     }
   }
 };
