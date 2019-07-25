@@ -2,13 +2,18 @@
 .page
   position: fixed
   top: 34px
+  display: none
   color: white
-  font-size: 40px
+  font-size: .75rem
   font-family: "Bloodlust"
   transition: opacity ease
   animation-duration: 2s
   animation-name: opacity-title
   animation-fill-mode: forwards
+
+  +from($tablet)
+    font-size: 1.5rem
+    display: inherit
 
 @keyframes opacity-title
   from
@@ -46,3 +51,40 @@ h3
   font-size: 1rem
   padding-bottom: 1em
   margin-top: 0
+
+
+.pour-un-mechant
+  padding-top: 3rem
+  font-size: 2.25rem
+  font-family: "bloodlust"
+  margin-bottom: 0
+  padding-bottom: 1rem
+
+  +from($tablet)
+    font-size: 4rem
+    padding-top: 5rem
+
+.videodrome
+  color: #FFF
+  margin-bottom: 0
+  font-family: "Montserrat-Bold"
+  font-size: 1.25rem
+
+  +from($tablet)
+    font-size: 2rem
+
+.centered
+  padding-top: 8rem
+
+  +from($tablet)
+    padding-top: 13rem
+
+.title
+  padding-top: 2rem
+  padding-bottom: 1rem 
+  margin: 0 auto
+  font-family: "bloodlust"
+
+  +from($tablet)
+    padding-bottom: 1.25rem
+    padding-top: 4rem
