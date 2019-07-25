@@ -23,16 +23,20 @@
 .commencer
   display: block
   position: relative
-  font-size: 48px
+  font-size: 1.5rem
   background-color: #E00000
   color: #FFF
-  width: 470px
+  width: 14rem
   border-radius: 25px
   border-color: red
-  padding-top: 10px
+  padding-top: 0.25rem
   padding-left: 0
   text-align: center
   text-decoration: none
-  padding-bottom: 10px
+  padding-bottom: 0.25rem
   letter-spacing: 5px
   font-family: "Montserrat-Bold"
+
+  +from($tablet)
+    width: 19rem
+    font-size: 2rem
