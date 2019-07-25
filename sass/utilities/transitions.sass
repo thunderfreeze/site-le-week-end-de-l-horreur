@@ -25,3 +25,17 @@
 .slide-bottom-enter-active,
 .slide-bottom-leave-active
   transition: opacity $duration02, transform $duration13
+
+.reprendre
+  transition: opacity ease
+  animation-delay: 2s
+  animation-duration: 1s
+  animation-name: opacity
+  animation-fill-mode: forwards
+
+
+@keyframes opacity
+  from
+    opacity: 0
+  to
+    opacity: 1
