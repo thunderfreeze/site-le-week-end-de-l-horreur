@@ -59,6 +59,9 @@ router.beforeEach((to, from, next) => {
   if (to.name == "Answer") toBodyClass += " answer";
   if (from.name == "Answer") fromBodyClass += " answer";
 
+  if (to.name == "Question") toBodyClass += " question";
+  if (from.name == "Question") fromBodyClass += " question";
+
   if (to.params.question_number) toBodyClass += `-${to.params.question_number}`;
 
   if (from.params.question_number)
