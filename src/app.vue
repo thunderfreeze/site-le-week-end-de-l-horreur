@@ -3,7 +3,18 @@
     transition(:name = "transitionName" mode="out-in")
       router-view
 
-    
+
+    h2.question-pour-un-mechant QUESTION POUR UN MECHANT
+    h2.page(v-if="questionNumber == 1") 01/10
+    h2.page(v-if="questionNumber == 2") 02/10
+    h2.page(v-if="questionNumber == 3") 03/10
+    h2.page(v-if="questionNumber == 4") 04/10
+    h2.page(v-if="questionNumber == 5") 05/10
+    h2.page(v-if="questionNumber == 6") 06/10
+    h2.page(v-if="questionNumber == 7") 07/10
+    h2.page(v-if="questionNumber == 8") 08/10
+    h2.page(v-if="questionNumber == 9") 09/10
+    h2.page(v-if="questionNumber == 10") 10/10
 
     p.score(v-if="pastAnswers.length > 0") Ton score: {{score}}/10
 
@@ -27,11 +38,14 @@
         li
           router-link(:to="{path: '/reponse/1'}") Answer
 
+    a.reprendre(v-if="pastAnswers.length > 0 && pastAnswers.length != 10" href="" @click.prevent="resume") REPRENDRE
+
 </template>
 
 <style lang="sass">
 @import "minireset.css/minireset.sass"
 @import "utilities/transitions.sass"
+@import "elements/_all.sass"
 @import "fonts/_all.sass"
 @import "layout/_all.sass"
 
@@ -81,29 +95,40 @@ body
     .main-container
       display: inherit
 
+body
+  &.schedule
+    .question-pour-un-mechant
+      display: none
+
+body
+  &.about
+    .question-pour-un-mechant
+      display: none
+
+body
+  &.home
+    .page
+      display: none
+
+body
+  &.schedule
+    .page
+      display: none
+
+body
+  &.about
+    .page
+      display: none
+
+body
+  &.home
+    .question-pour-un-mechant
+      display: none
+
 .debug
   position: fixed
   top: 0
   left: 0
-
-.reprendre
-  display: block
-  position: absolute
-  font-size: 22px
-  background-color: #E00000
-  color: #FFF
-  width: 171px
-  border-radius: 25px
-  border-color: red
-  padding-top: 10px
-  padding-left: 0
-  right: 50px
-  bottom: 110px
-  position: fixed
-  text-align: center
-  text-decoration: none
-  padding-bottom: 10px
-  font-family: "Montserrat-Bold"
 
 .picture:hover
   box-shadow: 0 0 50px #FFF
@@ -121,23 +146,6 @@ body
   position: absolute
   color: red
 
-.commencer
-  display: block
-  position: relative
-  font-size: 48px
-  background-color: #E00000
-  color: #FFF
-  width: 470px
-  border-radius: 25px
-  border-color: red
-  padding-top: 10px
-  padding-left: 0
-  text-align: center
-  text-decoration: none
-  padding-bottom: 10px
-  letter-spacing: 5px
-  font-family: "Montserrat-Bold"
-
 a
   color: #AEAEAE
   font-size: 25px
@@ -148,33 +156,6 @@ a
 
 .menu ul li
   padding-left: 50px
-
-h1
-  color: #E00000
-  text-align: center
-  font-size: 2.5rem
-  margin-bottom: 70px
-  line-height: .75
-
-  +from($tablet)
-    font-size: 3.25rem
-
-
-
-h2
-  text-align: center
-  font-size: 1.25rem
-  color: #E00000
-
-  +from($tablet)
-    font-size: 2.25rem
-
-h3
-  text-align: center
-  color: #FFF
-  font-size: 1rem
-  padding-bottom: 1em
-  margin-top: 0
 
 p
   text-align: center
@@ -222,7 +203,8 @@ export default {
   name: "App",
   data() {
     return {
-      transitionName: "fade"
+      transitionName: "fade",
+      questionNumber: ""
     };
   },
   computed: {
@@ -233,9 +215,13 @@ export default {
       return this.$store.getters.pastAnswers;
     }
   },
+  methods: {
+    resume() {
+      this.$router.go(-1);
+    }
+  },
   watch: {
     $route(to, from) {
-      console.log(to, from);
       if (
         (to.name == "About" && from.name == "Question") ||
         (to.name == "Schedule" && from.name == "Question") ||
@@ -251,6 +237,13 @@ export default {
       )
         this.transitionName = "slide-bottom";
       else this.transitionName = "fade";
+
+      console.log(to);
+
+      if (to.params.question_number)
+        this.questionNumber = to.params.question_number;
+      else if (to.params.answer_number)
+        this.questionNumber = to.params.answer_number;
     }
   }
 };
