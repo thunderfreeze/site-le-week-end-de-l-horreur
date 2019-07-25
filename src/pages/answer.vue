@@ -105,7 +105,7 @@
 
 .diffusion
   font-family: "Montserrat-Medium"
-  font-size: 25px
+  font-size: 1rem
   animation-duration: .5s
   animation-delay: 1.25s
   animation-name: fade
@@ -119,8 +119,8 @@
     opacity: 1
 
 .bonne-reponse
-  padding-top: 62px
-  padding-bottom: 50px
+  padding-top: 2rem
+  padding-bottom: 1.75rem
   font-family: "Montserrat-Medium"
   animation-duration: .5s
   animation-delay: 1s
@@ -129,8 +129,7 @@
   animation-fill-mode: forwards
 
 .picture
-  height: 487px
-  width: 355px
+  width: 9rem
   display: block
   margin: auto
   padding: 0
@@ -138,6 +137,10 @@
   animation-duration: 1.25s
   animation-name: slidein
   animation-timing-function: cubic-bezier(0.1, 0.14, 0.4, 1.53)
+
+
+  +from($tablet)
+    width: 12rem
 
 @keyframes slidein
   from
