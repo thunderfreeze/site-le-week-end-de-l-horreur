@@ -125,6 +125,21 @@ body
     .question-pour-un-mechant
       display: none
 
+body
+  &.question
+    .reprendre
+      display: none
+
+body
+  &.answer
+    .reprendre
+      display: none
+
+body
+  &.home
+    .reprendre
+      display: none
+
 .debug
   position: fixed
   top: 0
