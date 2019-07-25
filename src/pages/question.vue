@@ -102,11 +102,14 @@
 
 //<REPONSE>//
 .reponse
-  font-size: 30px
+  font-size: 1rem
   font-family: "Montserrat-Bold"
   padding-bottom: 20px
   display: inline-block
   text-align: center
+
+  +tablet
+    font-size: 1.25rem
 
 .reponse-1
   color: #E9D4AE
