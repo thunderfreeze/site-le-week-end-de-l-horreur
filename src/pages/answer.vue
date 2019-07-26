@@ -128,6 +128,10 @@
   opacity: 0
   animation-fill-mode: forwards
 
+  +from($tablet)
+    padding-bottom: 1rem
+    padding-top: 1rem
+
 .picture
   width: 9rem
   display: block
