@@ -24,18 +24,6 @@
 
   +tablet
     font-size: 1.75rem
-
-.diffusion
-  font-family: "Montserrat-Medium"
-  font-size: 0.75rem
-
-  +from($tablet)
-    font-size: 1.25rem
-
-.place2
-  padding-bottom: 30px
-  text-align: left
-  font-family: "Montserrat-Medium"
 </style>
 
 <script>
