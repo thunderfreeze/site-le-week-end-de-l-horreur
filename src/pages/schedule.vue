@@ -40,28 +40,6 @@
   +tablet
     width: 60vw
     margin-left: 20vw
-
-.prog
-  padding-top: 0
-  padding-bottom: 0
-  margin-bottom: 0
-  font-size: 24px
-  font-family: "Montserrat-Bold"
-
-.programation
-  padding-top: 12px
-
-.date
-  padding-top: 40px
-  font-family: "Montserrat-Bold"
-  font-size: 22px
-
-.pad
-  padding-top: 50px
-
-.adresse
-  font-family: "Montserrat-Bold"
-  font-size: 25px
 </style>
 
 <script>

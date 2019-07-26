@@ -22,21 +22,6 @@
   +from($tablet)
     justify-content: space-around
     height: 840px
-
-.place
-  padding-top: 1rem
-  padding-bottom: 1rem
-
-  +from($tablet)
-    padding-top: 0
-    padding-bottom: 0
-
-
-.but
-  font-family: "Montserrat-Bold"
-
-  +from($tablet)
-    padding-top: 5rem
 </style>
 
 <script>
