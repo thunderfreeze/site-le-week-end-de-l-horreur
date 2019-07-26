@@ -51,11 +51,6 @@
 .programation
   padding-top: 12px
 
-.mechant
-  padding-top: 95px
-  padding-bottom: 26px
-  font-family: "Bloodlust"
-
 .date
   padding-top: 40px
   font-family: "Montserrat-Bold"
