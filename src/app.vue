@@ -5,18 +5,11 @@
 
 
     h2.question-pour-un-mechant QUESTION POUR UN MECHANT
-    h2.page(v-if="questionNumber == 1") 01/10
-    h2.page(v-if="questionNumber == 2") 02/10
-    h2.page(v-if="questionNumber == 3") 03/10
-    h2.page(v-if="questionNumber == 4") 04/10
-    h2.page(v-if="questionNumber == 5") 05/10
-    h2.page(v-if="questionNumber == 6") 06/10
-    h2.page(v-if="questionNumber == 7") 07/10
-    h2.page(v-if="questionNumber == 8") 08/10
-    h2.page(v-if="questionNumber == 9") 09/10
-    h2.page(v-if="questionNumber == 10") 10/10
+    h2.page {{questionNumber.padStart(2, '0')}}/10
 
-    p.score(v-if="pastAnswers.length > 0") Ton score: {{score}}/10
+
+
+    p.score(v-if="pastAnswers.length > 0") Ton score: {{score.padStart(2, '0')}}/10
 
     nav.menu
       ul
@@ -244,7 +237,7 @@ export default {
   },
   computed: {
     score() {
-      return this.$store.getters.score;
+      return this.$store.getters.score.toString();
     },
     pastAnswers() {
       return this.$store.getters.pastAnswers;
