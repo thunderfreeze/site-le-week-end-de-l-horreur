@@ -60,6 +60,7 @@ html
 
 body
   transition: background-color $duration $duration
+  font-family: "Montserrat-Medium"
 
   &.home
     .score
