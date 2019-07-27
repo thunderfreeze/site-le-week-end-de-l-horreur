@@ -20,13 +20,22 @@
     h1.question-answer-title-9.question-answer-title.centered(v-if="question_number == 9") Qui n’est pas alle Chez l’esthEticienne depuis 3 mois ?
 
     h1.question-answer-title-10.question-answer-title.centered(v-if="question_number == 10") 
-      <span class="relative-container">QUI ADORE <img class="crack1 crack" src="static/images/crack1.svg"> </span>
+      span.relative-container 
+        | QUI ADORE 
+        img.crack1.crack(src="static/images/crack1.svg")
 
-      <span class="relative-container">REGARDER LES FILLES <img class=" crack3 crack" src="static/images/crack3.svg"><img class=" crack4 crack" src="static/images/crack4.svg"></span> 
+      span.relative-container
+        | REGARDER LES FILLES 
+        img.crack3.crack(src="static/images/crack3.svg")
+        img.crack4.crack(src="static/images/crack4.svg") 
 
-      <span class="relative-container">SOUS LA<img class="crack5 crack" src="static/images/crack5.svg"></span>
+      span.relative-container
+        | SOUS LA
+        img.crack5.crack(src="static/images/crack5.svg")
 
-      <span class="relative-container"> DOUCHE ? <img class="crack2 crack" src="static/images/crack2.svg"></span>
+      span.relative-container
+        | DOUCHE ? 
+        img.crack2.crack(src="static/images/crack2.svg")
 
     .link-container
       router-link.reponse.reponse-1(v-if="question_number == 1" :to="{path: '/reponse/' + question_number}" @click.native="wrongAnswer") Les rats d'Opéra
@@ -73,6 +82,8 @@
 <style lang="sass">
 .question-container
   position: relative
+  background-color: blue
+  padding: 2rem 0 2rem 0
 
 .relative-container
   position: relative
@@ -104,7 +115,7 @@
 .reponse
   font-size: 1rem
   font-family: "Montserrat-Bold"
-  padding-bottom: 20px
+  padding-bottom: 1vh
   display: inline-block
   text-align: center
 
