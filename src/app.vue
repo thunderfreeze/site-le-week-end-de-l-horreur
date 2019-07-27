@@ -157,11 +157,8 @@ body
     font-size: 3.75rem
 
 a
-  color: #AEAEAE
-  font-size: 25px
-  font-weight: 300
+  color: #FFF
   text-decoration: none
-  vertical-align: middle
   font-family: "Montserrat-Light"
 
 p
@@ -174,10 +171,11 @@ p
     font-size: 1rem
 
 .main-container
-  position: relative
+  min-height: 100vh
   display: flex
   flex-direction: column
   justify-content: center
+  padding: 0 1.25rem 0 1.25rem
   //background-color: yellow
 
 .section
@@ -186,44 +184,35 @@ p
   align-items: center
 
 .score
-  position: absolute
-  bottom: -2rem
-  width: 100%
+  position: fixed
+  bottom: 0
+  right: 0
   font-size: 1rem
-  margin:  auto
   font-family: "BloodLust"
+  padding-right: 1.25rem
+  padding-bottom: 1.25rem
+  line-height: .5
+  // background-color: yellow
 
-  +from($tablet)
-    position: fixed
-    right: 50px
-    height: 65px
-    bottom: 0
-    width: auto
 
-.menu ul li
-  display: inline
-
-.menu ul li
-  padding-left: 2.25rem
-
-  +from($tablet)
-    padding-left: 2rem
-
+.menu ul li:not(:last-child)
+  padding-right: 1.25rem
 
 .menu
-  position: absolute
-  bottom: -30vw
-  width: 100%
-  height: 65px
+  position: fixed
+  bottom: 0
+  left: 0
+  font-size: 0.75rem
+  padding-left: 1.25rem
+  padding-bottom: 1.25rem
+  // background-color: green
 
+.menu ul
   +from($tablet)
-    position: fixed
-    bottom: 0
-    width: 408px
-    height: 65px
+    display: flex
 
 .active
-  color: #FFF
+  // color: #FFF
 </style>
 
 <script>
