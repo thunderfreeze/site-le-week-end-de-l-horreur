@@ -24,36 +24,45 @@
     h1.question-answer-title-10.question-answer-title.fade-in(v-if="answer_number == 10") PSYCHOSE
 
 
+    figure.figure(v-if="answer_number == 1")
+      router-link.figure-link(:to="{path: '/question/2'}")
+      img.figure-image(src="static/images/fantome.jpg")
 
-    router-link(v-if="answer_number == 1")(:to="{path: '/question/2'}")
-      img.picture(src="static/images/fantome.jpg")
+    figure.figure(v-if="answer_number == 2")
+      router-link.figure-link(:to="{path: '/question/3'}")
+      img.figure-image(src="static/images/L'homme-qui-rit.jpg")
 
-    router-link.picture(v-if="answer_number == 2")(:to="{path: '/question/3'}")
-      img.picture(src="static/images/L'homme-qui-rit.jpg")
+    figure.figure(v-if="answer_number == 3")
+      router-link.figure-link(:to="{path: '/question/4'}")
+      img.figure-image(src="static/images/dracula.jpg")
 
-    router-link.picture(v-if="answer_number == 3")(:to="{path: '/question/4'}")
-      img.picture(src="static/images/dracula.jpg")
+    figure.figure(v-if="answer_number == 4")
+      router-link.figure-link(:to="{path: '/question/5'}")
+      img.figure-image(src="static/images/frankenstein.jpg")
 
-    router-link.picture(v-if="answer_number == 4")(:to="{path: '/question/5'}")
-      img.picture(src="static/images/frankenstein.jpg")
+    figure.figure(v-if="answer_number == 5")
+      router-link.figure-link(:to="{path: '/question/6'}")
+      img.figure-image(src="static/images/Dr-Jekyl-&-Mr-Hyde.jpg")
 
-    router-link.picture(v-if="answer_number == 5")(:to="{path: '/question/6'}")
-      img.picture(src="static/images/Dr-Jekyl-&-Mr-Hyde.jpg")
+    figure.figure(v-if="answer_number == 6")
+      router-link.figure-link(:to="{path: '/question/7'}")
+      img.figure-image(src="static/images/momie.jpg")
 
-    router-link.picture(v-if="answer_number == 6")(:to="{path: '/question/7'}")
-      img.picture(src="static/images/momie.jpg")
+    figure.figure(v-if="answer_number == 7")
+      router-link.figure-link(:to="{path: '/question/8'}")
+      img.figure-image(src="static/images/chat.jpg")
 
-    router-link.picture(v-if="answer_number == 7")(:to="{path: '/question/8'}")
-      img.picture(src="static/images/chat.jpg")
+    figure.figure(v-if="answer_number == 8")
+      router-link.figure-link(:to="{path: '/question/9'}")
+      img.figure-image(src="static/images/corbeau.jpg")
 
-    router-link.picture(v-if="answer_number == 8")(:to="{path: '/question/9'}")
-      img.picture(src="static/images/corbeau.jpg")
+    figure.figure(v-if="answer_number == 9")
+      router-link.figure-link(:to="{path: '/question/10'}")
+      img.figure-image(src="static/images/Le-Loup.jpg")
 
-    router-link.picture(v-if="answer_number == 9")(:to="{path: '/question/10'}")
-      img.picture(src="static/images/Le-Loup.jpg")
-
-    router-link.picture(v-if="answer_number == 10")(:to="{name: 'Schedule'}")
-      img.picture(src="static/images/Psychose.jpg")
+    figure.figure(v-if="answer_number == 10")
+      router-link.figure-link(:to="{name: 'Schedule'}")
+      img.figure-image(src="static/images/Psychose.jpg")
 
     p.diff.diffusion(v-if="answer_number == 1") Diffusé a <span class="bold">20:00</span>
     p.diffusion(v-if="answer_number == 1") Le vendredi 7 juin 2019
@@ -100,9 +109,43 @@
 .diff
   padding-top: 2vh
 
+.figure
+  position: relative
+  display: flex
+  // border: 3px solid blue
+  animation-duration: 1.25s
+  animation-name: slidein
+  animation-timing-function: cubic-bezier(0.1, 0.14, 0.4, 1.53)
+
+.figure-image
+  position: relative
+  height: 40vh
+  width: auto
+  // transition: filter 1s ease
+
+.figure-link
+  position: absolute
+  z-index: 1
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  transition: box-shadow .5s ease
+
+
+.figure-link:hover
+  box-shadow: 0 0 50px #FFF
+
+  // & + .figure-image
+  //   filter: grayscale(1)
+
 .answer-container
-  background-color: blue
+  // background-color: blue
   padding: 4rem 0 4rem 0
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
 
 .bold
   font-family: "Montserrat-Bold"
@@ -137,21 +180,6 @@
 
   +from($tablet)
     font-size: 1.25rem
-
-.picture
-  height: 40vh
-  width: auto
-  display: block
-  margin: auto
-  padding: 0
-  transition: box-shadow .5s ease
-  animation-duration: 1.25s
-  animation-name: slidein
-  animation-timing-function: cubic-bezier(0.1, 0.14, 0.4, 1.53)
-
-
-  +from($tablet)
-
 
 @keyframes slidein
   from
