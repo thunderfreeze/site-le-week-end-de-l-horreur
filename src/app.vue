@@ -137,9 +137,6 @@ body
   top: 0
   left: 0
 
-.picture:hover
-  box-shadow: 0 0 50px #FFF
-
 .container-cta
   position: relative
   margin-top: 86px
