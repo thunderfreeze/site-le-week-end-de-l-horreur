@@ -82,7 +82,7 @@
 <style lang="sass">
 .question-container
   position: relative
-  background-color: blue
+  // background-color: blue
   padding: 2rem 0 2rem 0
 
 .relative-container
