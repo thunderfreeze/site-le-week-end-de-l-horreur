@@ -1,5 +1,5 @@
 <template lang="pug">
-  section
+  section.answer-container
   
     p.bonne-reponse La bonne réponse était
 
@@ -98,19 +98,26 @@
 
 <style lang="sass">
 .diff
-  padding-top: 50px
+  padding-top: 2vh
+
+.answer-container
+  background-color: blue
+  padding: 4rem 0 4rem 0
 
 .bold
   font-family: "Montserrat-Bold"
 
 .diffusion
   font-family: "Montserrat-Medium"
-  font-size: 1rem
+  font-size: .75rem
   animation-duration: .5s
   animation-delay: 1.25s
   animation-name: fade
   opacity: 0
   animation-fill-mode: forwards
+
+  +from($tablet)
+    font-size: 1.25rem
 
 @keyframes fade
   from
@@ -119,21 +126,21 @@
     opacity: 1
 
 .bonne-reponse
-  padding-top: 2rem
-  padding-bottom: 1.75rem
+  padding-bottom: 2vh
   font-family: "Montserrat-Medium"
   animation-duration: .5s
   animation-delay: 1s
+  font-size: .75rem
   animation-name: fade
   opacity: 0
   animation-fill-mode: forwards
 
   +from($tablet)
-    padding-bottom: 1rem
-    padding-top: 1rem
+    font-size: 1.25rem
 
 .picture
-  width: 9rem
+  height: 40vh
+  width: auto
   display: block
   margin: auto
   padding: 0
@@ -144,7 +151,7 @@
 
 
   +from($tablet)
-    width: 12rem
+
 
 @keyframes slidein
   from
